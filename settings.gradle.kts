@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Spahr"
 include(":app")
+include(":feature:future-expense")
+include(":core:feature")
+include(":core:theme")
