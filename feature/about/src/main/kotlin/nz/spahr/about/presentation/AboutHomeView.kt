@@ -1,4 +1,4 @@
-package nz.spahr.future_expense.presentation
+package nz.spahr.about.presentation
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -7,14 +7,14 @@ import androidx.compose.ui.tooling.preview.Preview
 import nz.spahr.theme.SpahrTheme
 
 @Composable
-internal fun HomeView(){
-    Greeting("World")
+internal fun AboutHomeView(){
+    About()
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun About(modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "This is the about view",
         modifier = modifier
     )
 }
@@ -23,6 +23,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     SpahrTheme {
-        Greeting("Android")
+        About()
     }
 }

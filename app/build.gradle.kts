@@ -1,5 +1,6 @@
 plugins {
     id("spahr.convention.android.application")
+    alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
 }
 
@@ -34,6 +35,7 @@ dependencies {
     implementation(project(":core:feature"))
     implementation(project(":core:theme"))
     implementation(project(":feature:future-expense"))
+    implementation(project(":feature:about"))
 
 //    libraries
     implementation(platform(libs.androidx.compose.bom))

@@ -8,8 +8,6 @@ android {
     namespace = "nz.spahr.future_expense"
 
     defaultConfig {
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
