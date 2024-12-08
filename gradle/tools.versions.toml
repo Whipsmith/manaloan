@@ -1,0 +1,22 @@
+[versions]
+agp = "8.8.0-beta01"
+kotlin = "2.0.21"
+targetSdk = "35"
+compileSdk = "35"
+minSdk = "24"
+
+[libraries]
+android-gradle-dependency = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradle-dependency = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+#android-application-dependency = { group = "com.android.application", version.ref = "agp" }
+#android-library-dependency = { group = "com.android.library", version.ref = "agp" }
+#kotlin-compose-dependency = { group = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+#kotlin-serialisation-dependency = { group ="org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialisation = { id ="org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
+

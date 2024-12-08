@@ -1,16 +1,13 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.serialisation)
-    alias(libs.plugins.kotlin.compose)
+    id("spahr.convention.android.library")
+    alias(tools.plugins.kotlin.serialisation)
+    alias(tools.plugins.kotlin.compose)
 }
 
 android {
     namespace = "nz.spahr.future_expense"
-    compileSdk = 35
 
     defaultConfig {
-        minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -24,10 +21,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = "11"

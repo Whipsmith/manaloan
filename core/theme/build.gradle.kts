@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    alias(tools.plugins.android.library)
+    alias(tools.plugins.kotlin.android)
+    alias(tools.plugins.kotlin.compose)
 }
 
 android {

@@ -1,6 +1,4 @@
 [versions]
-agp = "8.8.0-beta01"
-kotlin = "2.0.21"
 serialisation = "1.7.3"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -43,10 +41,5 @@ material = { group = "com.google.android.material", name = "material", version.r
 kotlin-serialisation = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialisation"}
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-kotlin-serialisation = { id ="org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
-android-library = { id = "com.android.library", version.ref = "agp" }
 
 
