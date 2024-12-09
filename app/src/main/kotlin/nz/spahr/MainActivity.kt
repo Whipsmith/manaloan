@@ -12,12 +12,13 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import nz.spahr.feature.navigation.BottomNavItem
 import nz.spahr.feature.navigation.FeatureNavGraph
-import nz.spahr.future_expense.navigation.FutureExpenseHome
+import nz.spahr.future_expense.navigation.destination.FutureExpenseHome
 import nz.spahr.theme.SpahrTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.compose.koinInject
@@ -37,24 +38,29 @@ class MainActivity : ComponentActivity() {
                     Scaffold(
                         modifier = Modifier.fillMaxSize(),
                         bottomBar = {
-                            NavigationBar {
-                                var currentBackStackEntry =
-                                    navController.currentBackStackEntryAsState().value
-                                val currentDestination = currentBackStackEntry?.destination
-                                bottomNavItems.forEach { item ->
-                                    val selected =
-                                        currentDestination?.let { item.isSelected(it) } == true
-                                    NavigationBarItem(
-                                        selected = selected,
-                                        onClick = { navController.navigate(item.destination) },
-                                        icon = {
-                                            Icon(
-                                                imageVector = item.icon,
-                                                contentDescription = item.label
-                                            )
-                                        },
-                                        label = { Text(text = item.label) }
-                                    )
+                            var currentBackStackEntry =
+                                navController.currentBackStackEntryAsState().value
+                            val currentDestination: NavDestination? = currentBackStackEntry?.destination
+                            val displayNavBar = bottomNavItems.any{ item ->
+                                currentDestination?.let { item.isSelected(it) } == true
+                            }
+                            if (displayNavBar) {
+                                NavigationBar {
+                                    bottomNavItems.forEach { item ->
+                                        val selected =
+                                            currentDestination?.let { item.isSelected(it) } == true
+                                        NavigationBarItem(
+                                            selected = selected,
+                                            onClick = { navController.navigate(item.destination) },
+                                            icon = {
+                                                Icon(
+                                                    imageVector = item.icon,
+                                                    contentDescription = item.label
+                                                )
+                                            },
+                                            label = { Text(text = item.label) }
+                                        )
+                                    }
                                 }
                             }
                         },
