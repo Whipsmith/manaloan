@@ -4,6 +4,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.EaseIn
+import androidx.compose.animation.core.EaseOut
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
@@ -40,10 +47,12 @@ class MainActivity : ComponentActivity() {
                         bottomBar = {
                             var currentBackStackEntry =
                                 navController.currentBackStackEntryAsState().value
-                            val currentDestination: NavDestination? = currentBackStackEntry?.destination
-                            val displayNavBar = bottomNavItems.any{ item ->
+                            val currentDestination: NavDestination? =
+                                currentBackStackEntry?.destination
+                            val displayNavBar = bottomNavItems.any { item ->
                                 currentDestination?.let { item.isSelected(it) } == true
                             }
+
                             if (displayNavBar) {
                                 NavigationBar {
                                     bottomNavItems.forEach { item ->
@@ -68,7 +77,27 @@ class MainActivity : ComponentActivity() {
                         NavHost(
                             navController = navController,
                             startDestination = FutureExpenseHome,
-                            modifier = Modifier.padding(innerPadding)
+                            modifier = Modifier.padding(innerPadding),
+                            enterTransition = {
+                                fadeIn(
+                                    animationSpec = tween(
+                                        300, easing = LinearEasing
+                                    )
+                                ) + slideIntoContainer(
+                                    animationSpec = tween(300, easing = EaseIn),
+                                    towards = AnimatedContentTransitionScope.SlideDirection.Start
+                                )
+                            },
+                            exitTransition = {
+                                fadeOut(
+                                    animationSpec = tween(
+                                        300, easing = LinearEasing
+                                    )
+                                ) + slideOutOfContainer(
+                                    animationSpec = tween(300, easing = EaseOut),
+                                    towards = AnimatedContentTransitionScope.SlideDirection.End
+                                )
+                            }
                         ) {
                             featureGraphs.forEach { feature ->
                                 feature.navigationGraph(this, navController)
