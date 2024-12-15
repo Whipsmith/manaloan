@@ -1,18 +1,13 @@
 plugins {
-    alias(tools.plugins.android.library)
-    alias(tools.plugins.kotlin.android)
+    id("spahr.convention.android.library")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
 }
 
 android {
     namespace = "nz.spahr.about"
-    compileSdk = 35
 
     defaultConfig {
-        minSdk = 24
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -25,10 +20,7 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
+
     kotlinOptions {
         jvmTarget = "11"
     }
