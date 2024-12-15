@@ -1,22 +1,28 @@
 package nz.spahr.future_expense.navigation.destination
 
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import kotlinx.serialization.Serializable
-import nz.spahr.future_expense.presentation.FutureExpenseDetailView
+import nz.spahr.future_expense.presentation.detail.FutureExpenseDetailView
+import nz.spahr.future_expense.presentation.detail.FutureExpenseDetailViewModel
+import org.koin.androidx.compose.koinViewModel
+import org.koin.core.parameter.parametersOf
 
 @Serializable
 data class FutureExpenseDetail(val id: String)
 
-fun NavGraphBuilder.detail(){
-    composable<FutureExpenseDetail>{ backStackEntry ->
-        val profile: FutureExpenseDetail = backStackEntry.toRoute()
-        FutureExpenseDetailView(id = profile.id)
+fun NavGraphBuilder.detail() {
+    composable<FutureExpenseDetail> { backStackEntry ->
+        val expense: FutureExpenseDetail = backStackEntry.toRoute()
+        val viewModel: FutureExpenseDetailViewModel = koinViewModel { parametersOf(expense.id) }
+        val state = viewModel.state.collectAsStateWithLifecycle()
+        FutureExpenseDetailView(state = state.value)
     }
 }
 
-fun NavHostController.navigateToDetail(id: String){
+fun NavHostController.navigateToDetail(id: String) {
     navigate(FutureExpenseDetail(id))
 }

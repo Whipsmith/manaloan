@@ -2,6 +2,7 @@ package nz.spahr
 
 import android.app.Application
 import nz.spahr.di.appModule
+import nz.spahr.di.featureModules
 import nz.spahr.di.navigationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -15,7 +16,7 @@ class SpahrApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@SpahrApplication)
-            modules(listOf(appModule, navigationModule))
+            modules(listOf(appModule, navigationModule, featureModules))
         }
     }
 }
