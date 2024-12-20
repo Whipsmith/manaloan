@@ -1,4 +1,4 @@
-package nz.spahr.future_expense.presentation.detail
+package nz.spahr.future_expense.presentation.detail.view
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -9,17 +9,19 @@ import nz.spahr.theme.SpahrTheme
 
 @Composable
 internal fun FutureExpenseDetailView(state: FuturePaymentUiState) {
-when(state){
-    is FuturePaymentUiState.Data -> {
-        Demo(state.detail.id)
+    when (state) {
+        is FuturePaymentUiState.Data -> {
+            Demo(state.detail.id)
+        }
+
+        is FuturePaymentUiState.Error -> {
+            Text(state.errorMessage)
+        }
+
+        FuturePaymentUiState.Loading -> {
+            Text("Loading...")
+        }
     }
-    is FuturePaymentUiState.Error -> {
-        Text(state.errorMessage)
-    }
-    FuturePaymentUiState.Loading -> {
-        Text("Loading...")
-    }
-}
 //    Demo(id)
 }
 

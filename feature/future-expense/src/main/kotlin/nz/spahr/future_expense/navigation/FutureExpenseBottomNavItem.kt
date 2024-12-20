@@ -6,7 +6,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
 import nz.spahr.feature.navigation.BottomNavItem
-import nz.spahr.future_expense.navigation.destination.FutureExpenseHome
+import nz.spahr.future_expense.presentation.home.FutureExpenseHome
 
 object FutureExpenseBottomNavItem : BottomNavItem {
     override val icon: ImageVector = Icons.Filled.DateRange

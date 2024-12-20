@@ -25,7 +25,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import nz.spahr.feature.navigation.BottomNavItem
 import nz.spahr.feature.navigation.FeatureNavGraph
-import nz.spahr.future_expense.navigation.destination.FutureExpenseHome
+import nz.spahr.future_expense.presentation.home.FutureExpenseHome
 import nz.spahr.theme.SpahrTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.compose.koinInject

@@ -1,4 +1,4 @@
-package nz.spahr.future_expense.presentation
+package nz.spahr.future_expense.presentation.home.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,13 +12,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import nz.spahr.theme.SpahrTheme
 
 @Composable
-internal fun FutureExpenseHomeView(
+internal fun FutureExpenseListView(
     navigateToDetail: (String) -> Unit,
 ) {
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.Companion.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
+        horizontalAlignment = Alignment.Companion.CenterHorizontally,
     ) {
         Greeting("World")
         Button(onClick = { navigateToDetail("This Id") }) { Text("Press for detail") }
@@ -26,7 +26,7 @@ internal fun FutureExpenseHomeView(
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(name: String, modifier: Modifier = Modifier.Companion) {
     Text(
         text = "Hello $name!",
         modifier = modifier
