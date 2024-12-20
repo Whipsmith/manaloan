@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import nz.spahr.future_expense.domain.usecase.GetFuturePayment
+import nz.spahr.domain.usecase.future_payment.GetFuturePayment
 import nz.spahr.future_expense.presentation.detail.model.FuturePaymentUiState
 
 class FutureExpenseDetailViewModel(

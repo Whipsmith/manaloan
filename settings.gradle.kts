@@ -1,4 +1,3 @@
-
 pluginManagement {
     repositories {
         google {
@@ -30,6 +29,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Spahr"
 include(":app")
+include(":domain")
 include(":core:feature")
 include(":core:theme")
 include(":feature:about")

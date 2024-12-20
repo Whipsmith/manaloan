@@ -1,17 +1,17 @@
-package nz.spahr.future_expense.domain.usecase
+package nz.spahr.domain.usecase.future_payment
 
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import nz.spahr.future_expense.domain.entity.FuturePayment
+import nz.spahr.domain.entity.future_payment.FuturePaymentDetail
 import kotlin.time.Duration.Companion.seconds
 
 class GetFuturePayment {
-    operator fun invoke(id: String): Flow<FuturePayment> {
+    operator fun invoke(id: String): Flow<FuturePaymentDetail> {
         return flow {
             delay(3.seconds)
-            emit(FuturePayment(id))
+            emit(FuturePaymentDetail(id))
             awaitCancellation()
         }
     }

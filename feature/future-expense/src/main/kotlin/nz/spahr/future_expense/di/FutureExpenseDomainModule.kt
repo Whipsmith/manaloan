@@ -1,6 +1,6 @@
 package nz.spahr.future_expense.di
 
-import nz.spahr.future_expense.domain.usecase.GetFuturePayment
+import nz.spahr.domain.usecase.future_payment.GetFuturePayment
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 

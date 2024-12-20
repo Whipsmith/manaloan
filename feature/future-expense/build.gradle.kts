@@ -30,6 +30,7 @@ dependencies {
 //    modules
     implementation(project(":core:feature"))
     implementation(project(":core:theme"))
+    implementation(project(":domain"))
 
 //    libraries
     implementation(platform(libs.androidx.compose.bom))
