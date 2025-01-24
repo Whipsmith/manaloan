@@ -3,7 +3,7 @@ package nz.spahr.feature.navigation
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavDestination
 
-interface BottomNavItem {
+interface MainNavItem {
     val icon: ImageVector
     val label: String
     val destination: Any

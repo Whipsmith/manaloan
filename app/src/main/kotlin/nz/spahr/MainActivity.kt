@@ -12,19 +12,19 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
+import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
+import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffoldDefaults
+import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import nz.spahr.feature.navigation.BottomNavItem
 import nz.spahr.feature.navigation.FeatureNavGraph
+import nz.spahr.feature.navigation.MainNavItem
 import nz.spahr.future_expense.presentation.home.FutureExpenseHome
 import nz.spahr.theme.SpahrTheme
 import org.koin.androidx.compose.KoinAndroidContext
@@ -39,45 +39,52 @@ class MainActivity : ComponentActivity() {
             SpahrTheme {
                 KoinAndroidContext {
                     val featureGraphs: List<FeatureNavGraph> = koinInject(named<FeatureNavGraph>())
-                    val bottomNavItems: List<BottomNavItem> = koinInject(named<BottomNavItem>())
+                    val mainNavItems: List<MainNavItem> = koinInject(named<MainNavItem>())
                     val navController = rememberNavController()
 
-                    Scaffold(
-                        modifier = Modifier.fillMaxSize(),
-                        bottomBar = {
-                            var currentBackStackEntry =
-                                navController.currentBackStackEntryAsState().value
-                            val currentDestination: NavDestination? =
-                                currentBackStackEntry?.destination
-                            val displayNavBar = bottomNavItems.any { item ->
-                                currentDestination?.let { item.isSelected(it) } == true
-                            }
+                    var currentBackStackEntry =
+                        navController.currentBackStackEntryAsState().value
+                    val currentDestination: NavDestination? =
+                        currentBackStackEntry?.destination
+                    val displayNavBar = mainNavItems.any { item ->
+                        currentDestination?.let { item.isSelected(it) } == true
+                    }
 
-                            if (displayNavBar) {
-                                NavigationBar {
-                                    bottomNavItems.forEach { item ->
-                                        val selected =
-                                            currentDestination?.let { item.isSelected(it) } == true
-                                        NavigationBarItem(
-                                            selected = selected,
-                                            onClick = { navController.navigate(item.destination) },
-                                            icon = {
-                                                Icon(
-                                                    imageVector = item.icon,
-                                                    contentDescription = item.label
-                                                )
-                                            },
-                                            label = { Text(text = item.label) }
+                    val adaptiveInfo = currentWindowAdaptiveInfo()
+                    val customNavSuiteType = with(adaptiveInfo) {
+                        if (displayNavBar) {
+                            NavigationSuiteScaffoldDefaults.calculateFromAdaptiveInfo(adaptiveInfo)
+                        } else {
+                            NavigationSuiteType.None
+                        }
+                    }
+
+//                    TODO: Wrap this in a scaffold to house nav drawer and account image? (See google photos)
+                    NavigationSuiteScaffold(
+                        modifier = Modifier.fillMaxSize(),
+                        layoutType = customNavSuiteType,
+                        navigationSuiteItems = {
+                            mainNavItems.forEach { item ->
+                                val selected =
+                                    currentDestination?.let { item.isSelected(it) } == true
+                                item(
+                                    selected = selected,
+                                    onClick = { navController.navigate(item.destination) },
+                                    icon = {
+                                        Icon(
+                                            imageVector = item.icon,
+                                            contentDescription = item.label
                                         )
-                                    }
-                                }
+                                    },
+                                    label = { Text(text = item.label) }
+                                )
                             }
                         },
-                    ) { innerPadding ->
+                    ) {
                         NavHost(
                             navController = navController,
                             startDestination = FutureExpenseHome,
-                            modifier = Modifier.padding(innerPadding),
+                            modifier = Modifier,
                             enterTransition = {
                                 fadeIn(
                                     animationSpec = tween(
