@@ -30,7 +30,7 @@ dependencyResolutionManagement {
 rootProject.name = "Spahr"
 include(":app")
 include(":domain")
-include(":core:feature")
+include(":core:feature-contract")
 include(":core:theme")
 include(":feature:about")
 include(":feature:future-expense")

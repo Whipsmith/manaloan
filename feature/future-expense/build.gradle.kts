@@ -27,8 +27,8 @@ android {
 
 dependencies {
 
-//    modules
-    implementation(project(":core:feature"))
+implementation(project(":core:feature-contract"))
+    //    modules
     implementation(project(":core:theme"))
     implementation(project(":domain"))
 

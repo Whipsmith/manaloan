@@ -31,8 +31,8 @@ android {
 }
 
 dependencies {
-//    Modules
-    implementation(project(":core:feature"))
+implementation(project(":core:feature-contract"))
+    //    Modules
     implementation(project(":core:theme"))
     implementation(project(":feature:future-expense"))
     implementation(project(":feature:about"))

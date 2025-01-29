@@ -7,6 +7,9 @@
       <module name="Spahr.buildSrc" target="21" />
       <module name="Spahr.buildSrc.main" target="21" />
       <module name="Spahr.buildSrc.test" target="21" />
+      <module name="Spahr.core.auth" target="11" />
+      <module name="Spahr.core.auth.main" target="11" />
+      <module name="Spahr.core.auth.test" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
