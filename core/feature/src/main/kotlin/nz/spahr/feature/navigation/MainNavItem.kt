@@ -1,12 +1,11 @@
 package nz.spahr.feature.navigation
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.navigation.NavDestination
+import kotlin.reflect.KClass
 
 interface MainNavItem {
     val icon: ImageVector
     val label: String
     val destination: Any
-
-    fun isSelected(destination: NavDestination): Boolean
+    val destinationClass: KClass<*>
 }
