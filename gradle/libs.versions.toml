@@ -5,14 +5,16 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
+activityCompose = "1.10.0"
 composeBom = "2024.11.00"
-composeNavigation = "2.8.4"
+composeNavigation = "2.8.5"
 koin = "4.0.0"
 appcompat = "1.7.0"
 material = "1.12.0"
 jetbrainsKotlinJvm = "1.9.24"
-coroutines = "1.7.3"
+coroutines = "1.10.1"
+immutableCollections = "0.3.8"
+truth = "1.4.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,7 +35,7 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-material3-adaptive-navigation = { group = "androidx.compose.material3", name = "material3-adaptive-navigation-suite" }
 
 coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
-
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
 koin-core = { module = "io.insert-koin:koin-core" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
@@ -41,10 +43,14 @@ koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = 
 koin-compose-navigation = { module = "io.insert-koin:koin-androidx-compose-navigation", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin" }
 
+
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
+kotlin-immutable-collections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "immutableCollections" }
 kotlin-serialisation = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialisation" }
+
+google-truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 
 [plugins]
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }

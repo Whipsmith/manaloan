@@ -5,16 +5,16 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import nz.spahr.feature.navigation.FeatureNavGraph
-import nz.spahr.future_expense.presentation.home.FutureExpenseHome
+import nz.spahr.feature.navigation.MainNavItem
 import org.koin.compose.koinInject
 import org.koin.core.qualifier.named
 
 @Composable
-internal fun MainNavHost(navController: NavHostController) {
+internal fun MainNavHost(navController: NavHostController, startDestinations: List<MainNavItem>) {
     val featureGraphs: List<FeatureNavGraph> = koinInject(named<FeatureNavGraph>())
     NavHost(
         navController = navController,
-        startDestination = FutureExpenseHome,
+        startDestination = startDestinations.first().destination,
         modifier = Modifier,
     ) {
         featureGraphs.forEach { feature ->

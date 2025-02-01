@@ -7,6 +7,7 @@ import nz.spahr.about.presentation.home.AboutHome
 import nz.spahr.feature.navigation.MainNavItem
 import kotlin.reflect.KClass
 
+
 object AboutMainNavItem : MainNavItem {
     override val icon: ImageVector = Icons.Filled.Info
     override val label: String = "About"

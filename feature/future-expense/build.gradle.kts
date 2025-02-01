@@ -27,9 +27,10 @@ android {
 
 dependencies {
 
-implementation(project(":core:feature-contract"))
     //    modules
     implementation(project(":core:theme"))
+    implementation(project(":core:feature-contract"))
+    implementation(project(":core:feature-flag"))
     implementation(project(":domain"))
 
 //    libraries
@@ -48,6 +49,8 @@ implementation(project(":core:feature-contract"))
 
 //    test
     testImplementation(libs.junit)
+    testImplementation(libs.coroutines.test)
+    testImplementation(libs.google.truth)
 
 //    android test
     androidTestImplementation(libs.androidx.junit)

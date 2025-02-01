@@ -31,9 +31,10 @@ android {
 }
 
 dependencies {
-implementation(project(":core:feature-contract"))
+    implementation(project(":core:feature-contract"))
     //    Modules
     implementation(project(":core:theme"))
+    implementation(project(":core:feature-flag"))
     implementation(project(":feature:future-expense"))
     implementation(project(":feature:about"))
 
@@ -50,6 +51,7 @@ implementation(project(":core:feature-contract"))
     implementation(libs.androidx.material3.adaptive.navigation)
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
+    implementation(libs.kotlin.immutable.collections)
 
 //    Debug
     debugImplementation(libs.androidx.ui.tooling)

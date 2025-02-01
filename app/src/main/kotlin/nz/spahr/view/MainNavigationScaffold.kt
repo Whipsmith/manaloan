@@ -8,6 +8,8 @@ import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffo
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffoldDefaults
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
@@ -15,13 +17,16 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import nz.spahr.feature.navigation.MainNavItem
+import nz.spahr.feature_flag.isFeatureEnabled
+import nz.spahr.model.AppState
 import org.koin.compose.koinInject
 import org.koin.core.qualifier.named
 
 @Composable
 internal fun MainNavigationScaffold(
     navController: NavHostController,
-    navHost: @Composable () -> Unit,
+    appState: AppState,
+    navHost: @Composable (List<MainNavItem>) -> Unit,
 ) {
     val mainNavItems: List<MainNavItem> = koinInject(named<MainNavItem>())
     var currentBackStackEntry =
@@ -40,11 +45,19 @@ internal fun MainNavigationScaffold(
             NavigationSuiteType.None
         }
     }
+    val displayItems = remember {
+        derivedStateOf {
+            mainNavItems.filter {
+                it.isFeatureEnabled { flag -> appState.featureMap.getOrDefault(flag, false) }
+            }
+        }
+    }
+
     NavigationSuiteScaffold(
         modifier = Modifier.fillMaxSize(),
         layoutType = customNavSuiteType,
         navigationSuiteItems = {
-            mainNavItems.forEach { item ->
+            displayItems.value.forEach { item ->
                 item(
                     selected = currentDestination.isChildOf(item),
                     onClick = { navController.navigate(item.destination) },
@@ -58,7 +71,7 @@ internal fun MainNavigationScaffold(
                 )
             }
         },
-        content = navHost,
+        content = { navHost(displayItems.value) },
     )
 }
 
