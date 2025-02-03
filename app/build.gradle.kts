@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
     implementation(libs.kotlin.immutable.collections)
+    implementation(libs.androidx.splash)
 
 //    Debug
     debugImplementation(libs.androidx.ui.tooling)
