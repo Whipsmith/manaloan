@@ -16,16 +16,16 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import nz.spahr.app.model.AppState
 import nz.spahr.feature.navigation.MainNavItem
 import nz.spahr.feature_flag.isFeatureEnabled
-import nz.spahr.model.AppState
 import org.koin.compose.koinInject
 import org.koin.core.qualifier.named
 
 @Composable
 internal fun MainNavigationScaffold(
     navController: NavHostController,
-    appState: AppState,
+    appState: AppState.Data,
     navHost: @Composable (List<MainNavItem>) -> Unit,
 ) {
     val mainNavItems: List<MainNavItem> = koinInject(named<MainNavItem>())

@@ -4,18 +4,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.runtime.Composable
-import androidx.navigation.compose.rememberNavController
-import kotlinx.collections.immutable.toPersistentHashMap
-import nz.spahr.feature_flag.FeatureFlag
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import nz.spahr.app.AppViewModel
+import nz.spahr.app.SpahrApp
+import nz.spahr.app.model.AppState
 import nz.spahr.future_expense.feature_flags.FutureExpenseFlags
-import nz.spahr.model.rememberAppState
 import nz.spahr.theme.SpahrTheme
-import nz.spahr.view.MainNavHost
-import nz.spahr.view.MainNavigationScaffold
 import org.koin.androidx.compose.KoinAndroidContext
-import org.koin.compose.koinInject
-import org.koin.core.qualifier.named
+import org.koin.androidx.compose.koinViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,27 +20,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             SpahrTheme {
                 KoinAndroidContext {
+                    FutureExpenseFlags // Actual implementation is async
+                    val viewModel = koinViewModel<AppViewModel>()
+                    val state = viewModel.state.collectAsStateWithLifecycle()
+                    when (val appState = state.value) {
+                        is AppState.Data -> SpahrApp(appState)
+                        AppState.Loading -> {}
+                    }
 
-                    val navController = rememberNavController()
-
-//                    TODO: App view model?
-                    val featureFlags: List<FeatureFlag> = koinInject(named<FeatureFlag>())
-                    val featureFlagValueProvider =
-                        FutureExpenseFlags // Actual implementation is async
-
-                    val appState = rememberAppState(
-                        featureFlags.associateWith { (it as? FutureExpenseFlags)?.activationDate != null }
-                            .toPersistentHashMap()
-                    )
-//                    TODO: Wrap this in a scaffold to house nav drawer and account image? (See google photos)
-
-                    MainNavigationScaffold(
-                        navController = navController,
-                        navHost = @Composable {
-                            MainNavHost(navController = navController, startDestinations = it)
-                        },
-                        appState = appState,
-                    )
                 }
             }
         }
