@@ -1,8 +1,12 @@
 package nz.spahr.di
 
-import nz.spahr.app.AppStateProvider
 import nz.spahr.app.AppViewModel
-import nz.spahr.app.provider.AppStateFeatureFlagProvider
+import nz.spahr.app.model.AppStateProvider
+import nz.spahr.app.provider.FeatureFlagStateProvider
+import nz.spahr.app.provider.MainNavItemsStateProvider
+import nz.spahr.app.provider.NavigationGraphProvider
+import nz.spahr.feature.navigation.FeatureNavGraph
+import nz.spahr.feature.navigation.MainNavItem
 import nz.spahr.feature_flag.FeatureFlag
 import nz.spahr.feature_flag.FeatureFlagValueProvider
 import nz.spahr.future_expense.feature_flags.FutureExpenseFlags
@@ -25,13 +29,18 @@ val appModule = module {
     single<FeatureFlag> { FutureExpenseFlags.FutureExpenseFeature }
     single<FeatureFlagValueProvider> { FutureExpenseFlags }
 
-    single<AppStateProvider> {
-        AppStateFeatureFlagProvider(
-            getAll<FeatureFlag>(), getAll<FeatureFlagValueProvider>()
+    single(named<AppStateProvider>()) {
+        listOf<AppStateProvider>(
+            FeatureFlagStateProvider(
+                getAll<FeatureFlag>(), getAll<FeatureFlagValueProvider>()
+            ),
+            MainNavItemsStateProvider(get(named<MainNavItem>())),
+            NavigationGraphProvider(get(named<FeatureNavGraph>())),
         )
+
     }
 
     viewModel {
-        AppViewModel(getAll<AppStateProvider>())
+        AppViewModel(get(named<AppStateProvider>()))
     }
 }

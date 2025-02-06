@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.material3.adaptive.navigation)
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
+    implementation(libs.kotlin.serialisation)
     implementation(libs.kotlin.immutable.collections)
     implementation(libs.androidx.splash)
 

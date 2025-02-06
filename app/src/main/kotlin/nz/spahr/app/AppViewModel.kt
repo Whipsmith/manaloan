@@ -5,20 +5,29 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.merge
-import kotlinx.coroutines.flow.scan
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import nz.spahr.app.model.AppState
+import nz.spahr.app.model.AppStateDataBuilder
+import nz.spahr.app.model.AppStateProvider
+import nz.spahr.app.model.appStateData
 
-class AppViewModel(appStateProviders: List<AppStateProvider>) : ViewModel() {
-
-    private val providers: Flow<(AppState) -> AppState> = merge(
-        *appStateProviders.map { it.appStateUpdates }.toTypedArray()
-    )
+class AppViewModel(
+    stateProviders: List<AppStateProvider>
+) : ViewModel() {
+    private val providers: Flow<AppStateDataBuilder.() -> Unit> =
+        combine(stateProviders.map { it.updates }) { builderFunctions ->
+            { builder: AppStateDataBuilder ->
+                builderFunctions.forEach { it(builder) }
+            }
+        }
     private val initial: AppState = AppState.Loading
     val state: StateFlow<AppState> =
-        providers.scan(initial) { acc, value ->
-            value(acc)
+        providers.map {
+            appStateData {
+                it()
+            }
         }.stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(),

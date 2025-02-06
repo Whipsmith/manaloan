@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.navigation.compose.rememberNavController
 import nz.spahr.app.AppViewModel
 import nz.spahr.app.SpahrApp
 import nz.spahr.app.model.AppState
@@ -25,10 +26,14 @@ class MainActivity : ComponentActivity() {
                 KoinAndroidContext { // Actual implementation is async
                     val viewModel = koinViewModel<AppViewModel>()
                     val state = viewModel.state.collectAsStateWithLifecycle()
+                    val navController = rememberNavController()
                     when (val appState = state.value) {
                         is AppState.Data -> {
                             keepSplashScreen = false
-                            SpahrApp(appState)
+                            SpahrApp(
+                                navController = navController,
+                                appState = appState
+                            )
                         }
 
                         AppState.Loading -> {}
