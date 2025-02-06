@@ -1,10 +1,9 @@
 package nz.spahr.di
 
 import nz.spahr.app.AppViewModel
-import nz.spahr.app.model.AppStateProvider
-import nz.spahr.app.provider.FeatureFlagStateProvider
-import nz.spahr.app.provider.MainNavItemsStateProvider
-import nz.spahr.app.provider.NavigationGraphProvider
+import nz.spahr.app.provider.GetDetailNavigationGraphs
+import nz.spahr.app.provider.GetFeatureFlagMap
+import nz.spahr.app.provider.GetMainNavItems
 import nz.spahr.feature.navigation.FeatureNavGraph
 import nz.spahr.feature.navigation.MainNavItem
 import nz.spahr.feature_flag.FeatureFlag
@@ -29,18 +28,22 @@ val appModule = module {
     single<FeatureFlag> { FutureExpenseFlags.FutureExpenseFeature }
     single<FeatureFlagValueProvider> { FutureExpenseFlags }
 
-    single(named<AppStateProvider>()) {
-        listOf<AppStateProvider>(
-            FeatureFlagStateProvider(
-                getAll<FeatureFlag>(), getAll<FeatureFlagValueProvider>()
-            ),
-            MainNavItemsStateProvider(get(named<MainNavItem>())),
-            NavigationGraphProvider(get(named<FeatureNavGraph>())),
+    single<GetFeatureFlagMap> {
+        GetFeatureFlagMap(
+            getAll<FeatureFlag>(), getAll<FeatureFlagValueProvider>()
         )
-
     }
 
+    single<GetMainNavItems> { GetMainNavItems(get(named<MainNavItem>())) }
+
+    single<GetDetailNavigationGraphs> { GetDetailNavigationGraphs(get(named<FeatureNavGraph>())) }
+
+
     viewModel {
-        AppViewModel(get(named<AppStateProvider>()))
+        AppViewModel(
+            get(),
+            get(),
+            get(),
+        )
     }
 }
