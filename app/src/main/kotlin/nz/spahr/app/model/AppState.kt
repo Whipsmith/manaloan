@@ -8,6 +8,7 @@ import kotlinx.collections.immutable.toImmutableMap
 import nz.spahr.feature.navigation.FeatureNavGraph
 import nz.spahr.feature.navigation.MainNavItem
 import nz.spahr.feature_flag.FeatureFlag
+import kotlin.reflect.KClass
 
 
 @Stable
@@ -17,6 +18,7 @@ sealed interface AppState {
         val featureMap: ImmutableMap<FeatureFlag, Boolean>,
         val mainNavItems: List<MainNavItem>,
         val navigationGraphs: ImmutableList<FeatureNavGraph>,
+        val initialDestination: KClass<*>?,
     ) : AppState
 }
 
@@ -24,6 +26,7 @@ class AppStateDataBuilder {
     private val featureMapBuilder = mutableMapOf<FeatureFlag, Boolean>()
     private var navItemsBuilder: List<MainNavItem>? = null
     private val navGraphsBuilder = mutableListOf<FeatureNavGraph>()
+    private var initialDestinationBuilder: KClass<*>? = null
 
     fun features(flags: Map<FeatureFlag, Boolean>) {
         featureMapBuilder.putAll(flags)
@@ -37,12 +40,17 @@ class AppStateDataBuilder {
         navGraphsBuilder.addAll(featureGraphs)
     }
 
+    fun initialDestination(destination: KClass<*>?) {
+        initialDestinationBuilder = destination
+    }
+
     fun build(): AppState.Data {
         requireNotNull(navItemsBuilder) { "Main nav items must be set" }
         return AppState.Data(
             featureMap = featureMapBuilder.toImmutableMap(),
             mainNavItems = navItemsBuilder!!,
-            navigationGraphs = navGraphsBuilder.toImmutableList()
+            navigationGraphs = navGraphsBuilder.toImmutableList(),
+            initialDestination = initialDestinationBuilder
         )
     }
 }

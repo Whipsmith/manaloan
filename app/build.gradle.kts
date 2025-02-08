@@ -35,8 +35,10 @@ dependencies {
     //    Modules
     implementation(project(":core:theme"))
     implementation(project(":core:feature-flag"))
+    implementation(project(":core:auth"))
     implementation(project(":feature:future-expense"))
     implementation(project(":feature:about"))
+    implementation(project(":feature:fake-auth"))
 
 //    libraries
     implementation(platform(libs.androidx.compose.bom))

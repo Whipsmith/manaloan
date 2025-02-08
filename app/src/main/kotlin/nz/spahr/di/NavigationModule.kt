@@ -2,6 +2,7 @@ package nz.spahr.di
 
 import nz.spahr.about.navigation.AboutFeatureNavGraph
 import nz.spahr.about.navigation.AboutMainNavItem
+import nz.spahr.fake_auth.navigation.FakeAuthNavigationGraph
 import nz.spahr.feature.navigation.FeatureNavGraph
 import nz.spahr.feature.navigation.MainNavItem
 import nz.spahr.future_expense.navigation.FutureExpenseFeatureNavGraph
@@ -14,6 +15,7 @@ val navigationModule = module {
         listOf<FeatureNavGraph>(
             FutureExpenseFeatureNavGraph(),
             AboutFeatureNavGraph(),
+            FakeAuthNavigationGraph()
         )
     }
     single(named<MainNavItem>()) {

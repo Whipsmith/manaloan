@@ -40,7 +40,7 @@ internal fun SpahrApp(
 
     NavHost(
         navController = navController,
-        startDestination = MainNavigationScaffoldDestination::class
+        startDestination = appState.initialDestination ?: MainNavigationScaffoldDestination::class
     ) {
         mainNavigationScaffold(
             snackbarHostState = snackbarHostState,
