@@ -9,12 +9,14 @@ import java.time.ZoneOffset
 
 enum class FutureExpenseFlags(val activationDate: Long?) : FeatureFlag {
     TestFlagTrue(0L) {
-        override val id: String = TestFlagTrue::class.toString()
+        override val id: String
+            get() = TestFlagTrue::class.toString()
         override val description: String = "A flag to test flags. Enabled"
     },
 
     TestFlagFalse(null) {
-        override val id: String = TestFlagFalse::class.toString()
+        override val id: String
+            get() = TestFlagFalse::class.toString()
         override val description: String = "A flag to test flags. Disabled"
     },
 

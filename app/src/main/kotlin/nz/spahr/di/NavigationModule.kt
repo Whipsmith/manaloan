@@ -15,7 +15,7 @@ val navigationModule = module {
         listOf<FeatureNavGraph>(
             FutureExpenseFeatureNavGraph(),
             AboutFeatureNavGraph(),
-            FakeAuthNavigationGraph()
+            FakeAuthNavigationGraph(),
         )
     }
     single(named<MainNavItem>()) {

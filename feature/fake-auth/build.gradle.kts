@@ -2,6 +2,7 @@ plugins {
     id("spahr.convention.android.library")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
+    alias(tools.plugins.ksp)
 }
 
 android {
@@ -25,12 +26,17 @@ android {
     }
 }
 
+ksp {
+    arg("lyricist.internalVisibility", "true")
+}
+
 dependencies {
 
     //    modules
     implementation(project(":core:theme"))
     implementation(project(":core:feature-contract"))
     implementation(project(":core:auth"))
+    implementation(project(":core:content"))
 
 //    libraries
     implementation(platform(libs.androidx.compose.bom))
@@ -46,6 +52,8 @@ dependencies {
     implementation(libs.koin.compose)
     implementation(libs.koin.compose.navigation)
     implementation(libs.androidx.material.icons.extended)
+    implementation(libs.lyricist)
+    ksp(libs.lyricist.processor)
 
 //    test
     testImplementation(libs.junit)

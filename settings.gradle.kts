@@ -30,10 +30,13 @@ dependencyResolutionManagement {
 rootProject.name = "Spahr"
 include(":app")
 include(":domain")
+
 include(":core:feature-contract")
 include(":core:theme")
-include(":feature:about")
-include(":feature:future-expense")
 include(":core:feature-flag")
 include(":core:auth")
+include(":core:content")
+
+include(":feature:about")
+include(":feature:future-expense")
 include(":feature:fake-auth")
