@@ -19,5 +19,5 @@ object AboutMainNavItem : MainNavItem {
     override val screen: NavGraphBuilder.(NavHostController) -> Unit = {
         home()
     }
-
+    override val priority: Int = 0
 }

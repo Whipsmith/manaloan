@@ -11,4 +11,5 @@ interface MainNavItem {
     val destination: Any
     val destinationClass: KClass<*>
     val screen: NavGraphBuilder.(NavHostController) -> Unit
+    val priority: Int
 }

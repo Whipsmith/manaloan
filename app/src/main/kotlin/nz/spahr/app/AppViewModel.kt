@@ -33,13 +33,12 @@ class AppViewModel(
 
     private val providers: Flow<AppStateDataBuilder.() -> Unit> =
         getFeatureFlagMap().flatMapConcat { featureFlags ->
-            combine(
-                getMainNavItems().map {
-                    it.mapEnabledToBuilderFunction<MainNavItem>(
-                        { mainNavItems(it) },
-                        featureFlags,
-                    )
-                },
+            combine(getMainNavItems().map {
+                it.mapEnabledToBuilderFunction<MainNavItem>(
+                    { mainNavItems(it.sortedByDescending { it.priority }) },
+                    featureFlags,
+                )
+            },
                 getDetailNavigationGraphs().map {
                     it.mapEnabledToBuilderFunction<FeatureNavGraph>(
                         { navigationGraphs(it) },
@@ -55,8 +54,7 @@ class AppViewModel(
                                 )
                             )
                         }
-                    }
-            ) { builderFunctions ->
+                    }) { builderFunctions ->
                 { builder: AppStateDataBuilder ->
                     builder.features(featureFlags)
                     builderFunctions.forEach { it(builder) }

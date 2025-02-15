@@ -24,4 +24,6 @@ object FutureExpenseMainNavItem : MainNavItem, Flagged {
     }
 
     override val featureFlag: FeatureFlag = FutureExpenseFlags.FutureExpenseFeature
+
+    override val priority: Int = 4
 }
