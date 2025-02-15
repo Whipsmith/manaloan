@@ -5,7 +5,5 @@ import androidx.navigation.NavHostController
 import nz.spahr.feature.navigation.FeatureNavGraph
 
 class AboutFeatureNavGraph : FeatureNavGraph {
-    override val navigationGraph: NavGraphBuilder.(NavHostController) -> Unit = {
-
-    }
+    override val navigationGraph: NavGraphBuilder.(NavHostController) -> Unit = {}
 }

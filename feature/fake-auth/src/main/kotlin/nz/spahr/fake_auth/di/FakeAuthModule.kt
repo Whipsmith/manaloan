@@ -5,8 +5,11 @@ import nz.spahr.fake_auth.domain.repository.AuthRepository
 import nz.spahr.fake_auth.domain.usecase.MonitorSignedInState
 import nz.spahr.fake_auth.domain.usecase.SignIn
 import nz.spahr.fake_auth.framework.FakeAuthProvider
+import nz.spahr.fake_auth.navigation.FakeAuthNavigationGraph
 import nz.spahr.fake_auth.presentation.sign_in.SignInViewModel
+import nz.spahr.feature.navigation.FeatureNavGraph
 import org.koin.core.module.dsl.viewModel
+import org.koin.dsl.bind
 import org.koin.dsl.module
 
 val fakeAuthFeatureModule = module {
@@ -21,4 +24,8 @@ val fakeAuthFeatureModule = module {
             get(),
         )
     }
+
+    single {
+        FakeAuthNavigationGraph()
+    } bind FeatureNavGraph::class
 }
