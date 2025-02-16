@@ -2,8 +2,8 @@ package kiwi.autopocket.future_expense.feature_flags
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
-import kiwi.autopocket.feature_flag.FeatureFlag
-import kiwi.autopocket.feature_flag.FeatureFlagValueProvider
+import kiwi.apptly.feature_flag.FeatureFlag
+import kiwi.apptly.feature_flag.FeatureFlagValueProvider
 import org.junit.Test
 
 class FutureExpenseFlagsTest {

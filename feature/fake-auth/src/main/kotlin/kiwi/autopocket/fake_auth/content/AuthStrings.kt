@@ -1,6 +1,6 @@
 package kiwi.autopocket.fake_auth.content
 
-import kiwi.autopocket.content.CommonStrings
+import kiwi.apptly.content.CommonStrings
 
 internal data class AuthStrings(
     val common: CommonStrings,

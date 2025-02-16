@@ -2,8 +2,8 @@ package kiwi.autopocket.about.di
 
 import kiwi.autopocket.about.navigation.AboutFeatureNavGraph
 import kiwi.autopocket.about.navigation.AboutMainNavItem
-import kiwi.autopocket.feature.navigation.FeatureNavGraph
-import kiwi.autopocket.feature.navigation.MainNavItem
+import kiwi.apptly.feature.navigation.FeatureNavGraph
+import kiwi.apptly.feature.navigation.MainNavItem
 import org.koin.dsl.bind
 import org.koin.dsl.module
 

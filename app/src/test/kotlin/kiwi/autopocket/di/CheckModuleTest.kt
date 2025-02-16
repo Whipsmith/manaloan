@@ -1,10 +1,10 @@
 package kiwi.autopocket.di
 
-import kiwi.autopocket.presentation.app.provider.GetFeatureFlagMap
+import kiwi.apptly.presentation.app.provider.GetFeatureFlagMap
 import kiwi.autopocket.auth.provider.AuthProvider
-import kiwi.autopocket.presentation.app.AppViewModel
-import kiwi.autopocket.presentation.app.provider.GetDetailNavigationGraphs
-import kiwi.autopocket.presentation.app.provider.GetMainNavItems
+import kiwi.apptly.presentation.app.AppViewModel
+import kiwi.apptly.presentation.app.provider.GetDetailNavigationGraphs
+import kiwi.apptly.presentation.app.provider.GetMainNavItems
 import org.junit.Test
 import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.test.KoinTest

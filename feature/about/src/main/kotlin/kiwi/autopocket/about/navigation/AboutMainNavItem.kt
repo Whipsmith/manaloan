@@ -7,7 +7,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import kiwi.autopocket.about.presentation.home.AboutHome
 import kiwi.autopocket.about.presentation.home.home
-import kiwi.autopocket.feature.navigation.MainNavItem
+import kiwi.apptly.feature.navigation.MainNavItem
 import kotlin.reflect.KClass
 
 

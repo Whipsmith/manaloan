@@ -1,8 +1,8 @@
 package kiwi.autopocket.fake_auth.framework
 
 import kotlinx.coroutines.flow.map
-import kiwi.autopocket.auth.entity.AuthState
-import kiwi.autopocket.auth.provider.AuthProvider
+import kiwi.apptly.auth.entity.AuthState
+import kiwi.apptly.auth.provider.AuthProvider
 import kiwi.autopocket.fake_auth.domain.usecase.MonitorSignedInState
 import kiwi.autopocket.fake_auth.presentation.sign_in.SignInDestination
 

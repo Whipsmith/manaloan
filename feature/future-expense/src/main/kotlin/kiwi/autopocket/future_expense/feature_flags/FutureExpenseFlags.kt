@@ -1,8 +1,8 @@
 package kiwi.autopocket.future_expense.feature_flags
 
-import kiwi.autopocket.feature_flag.FeatureFlag
-import kiwi.autopocket.feature_flag.FeatureFlagValueProvider
-import kiwi.autopocket.feature_flag.FeatureFlagValueProviderPriority
+import kiwi.apptly.feature_flag.FeatureFlag
+import kiwi.apptly.feature_flag.FeatureFlagValueProvider
+import kiwi.apptly.feature_flag.FeatureFlagValueProviderPriority
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 

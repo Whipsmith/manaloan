@@ -7,9 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.rememberNavController
-import kiwi.autopocket.presentation.app.AppViewModel
-import kiwi.autopocket.presentation.app.AutoPocketApp
-import kiwi.autopocket.presentation.app.model.AppState
+import kiwi.apptly.presentation.app.AppViewModel
+import kiwi.apptly.presentation.app.AutoPocketApp
+import kiwi.apptly.presentation.app.model.AppState
 import kiwi.autopocket.theme.AutoPocketTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
