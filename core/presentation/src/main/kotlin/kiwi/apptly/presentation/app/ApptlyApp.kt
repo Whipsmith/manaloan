@@ -9,14 +9,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import kiwi.apptly.feature.navigation.MainNavItem
 import kiwi.apptly.presentation.app.model.AppState
 import kiwi.apptly.presentation.navigation.MainNavigationScaffoldDestination
 import kiwi.apptly.presentation.navigation.mainNavigationScaffold
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AutoPocketApp(
+fun ApptlyApp(
     navController: NavHostController,
     appState: AppState.Data,
 ) {

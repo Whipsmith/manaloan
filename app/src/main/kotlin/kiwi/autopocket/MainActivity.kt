@@ -8,7 +8,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.rememberNavController
 import kiwi.apptly.presentation.app.AppViewModel
-import kiwi.apptly.presentation.app.AutoPocketApp
+import kiwi.apptly.presentation.app.ApptlyApp
 import kiwi.apptly.presentation.app.model.AppState
 import kiwi.autopocket.theme.AutoPocketTheme
 import org.koin.androidx.compose.KoinAndroidContext
@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     when (val appState = state.value) {
                         is AppState.Data -> {
                             keepSplashScreen = false
-                            AutoPocketApp(
+                            ApptlyApp(
                                 navController = navController,
                                 appState = appState
                             )
