@@ -29,7 +29,7 @@ android {
 dependencies {
     implementation(project(":core:feature-contract"))
     //    modules
-    implementation(project(":core:theme"))
+    implementation(project(":theme"))
 
 //    libraries
     implementation(platform(libs.androidx.compose.bom))

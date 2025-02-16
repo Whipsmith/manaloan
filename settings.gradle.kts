@@ -33,11 +33,11 @@ include(":domain")
 
 include(":core:presentation")
 include(":core:feature-contract")
-include(":core:theme")
 include(":core:feature-flag")
 include(":core:auth")
-
 include(":core:content")
+
+include(":theme")
 include(":feature:about")
 include(":feature:future-expense")
 include(":feature:fake-auth")
