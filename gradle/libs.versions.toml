@@ -18,6 +18,8 @@ truth = "1.4.4"
 splash = "1.0.1"
 material-icons = "1.7.7"
 lyricist = "1.7.0"
+agp = "8.8.0"
+kotlin = "1.9.24"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -63,5 +65,7 @@ google-truth = { group = "com.google.truth", name = "truth", version.ref = "trut
 
 [plugins]
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 
 

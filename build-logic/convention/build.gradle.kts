@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl` // Enables writing Gradle scripts in Kotlin
 }
 
-group = "nz.spahr.buildlogic"
+group = "kiwi.autopocket.buildlogic"
 
 kotlin {
     jvmToolchain(17)
@@ -16,11 +16,11 @@ dependencies {
 gradlePlugin {
     plugins {
         create("androidLibraryPlugin") {
-            id = "spahr.convention.android.library" // This is your plugin ID
+            id = "autopocket.convention.android.library" // This is your plugin ID
             implementationClass = "AndroidLibraryPlugin" // Fully qualified class name
         }
         create("androidApplicationPlugin") {
-            id = "spahr.convention.android.application" // This is your plugin ID
+            id = "autopocket.convention.android.application" // This is your plugin ID
             implementationClass = "AndroidApplicationPlugin" // Fully qualified class name
         }
     }

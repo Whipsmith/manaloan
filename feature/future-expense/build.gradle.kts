@@ -1,11 +1,11 @@
 plugins {
-    id("spahr.convention.android.library")
+    id("autopocket.convention.android.library")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "nz.spahr.future_expense"
+    namespace = "kiwi.autopocket.future_expense"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

@@ -1,6 +1,6 @@
 kotlin version: 2.0.21
 error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
-File being compiled: /Users/daniel/AndroidStudioProjects/Spahr/feature/future-expense/src/main/kotlin/nz/spahr/future_expense/navigation/FutureExpenseHome.kt
+File being compiled: /Users/daniel/AndroidStudioProjects/Autopocket/feature/future-expense/src/main/kotlin/kiwi/autopocket/future_expense/navigation/FutureExpenseHome.kt
 The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
 	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
 	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
@@ -53,8 +53,8 @@ FUN name:home visibility:public modality:FINAL <> ($receiver:androidx.navigation
   $receiver: VALUE_PARAMETER name:<this> type:androidx.navigation.NavGraphBuilder
   BLOCK_BODY
     CALL 'public final fun composable$default <T> (typeMap: kotlin.collections.Map<kotlin.reflect.KType, @[JvmSuppressWildcards(suppress = <null>)] androidx.navigation.NavType<*>>?, deepLinks: kotlin.collections.List<androidx.navigation.NavDeepLink>?, enterTransition: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation.NavBackStackEntry>, @[JvmSuppressWildcards(suppress = <null>)] androidx.compose.animation.EnterTransition?>?, exitTransition: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation.NavBackStackEntry>, @[JvmSuppressWildcards(suppress = <null>)] androidx.compose.animation.ExitTransition?>?, popEnterTransition: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation.NavBackStackEntry>, @[JvmSuppressWildcards(suppress = <null>)] androidx.compose.animation.EnterTransition?>?, popExitTransition: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation.NavBackStackEntry>, @[JvmSuppressWildcards(suppress = <null>)] androidx.compose.animation.ExitTransition?>?, sizeTransform: @[ExtensionFunctionType] kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation.NavBackStackEntry>, @[JvmSuppressWildcards(suppress = <null>)] androidx.compose.animation.SizeTransform?>?, content: @[Composable] @[ExtensionFunctionType] kotlin.Function2<androidx.compose.animation.AnimatedContentScope, androidx.navigation.NavBackStackEntry, kotlin.Unit>, $mask0: kotlin.Int, $handler: kotlin.Any?): kotlin.Unit [inline] declared in androidx.navigation.compose.NavGraphBuilderKt' type=kotlin.Unit origin=DEFAULT_DISPATCH_CALL
-      <T>: nz.spahr.future_expense.navigation.FutureExpenseHome
-      $receiver: GET_VAR '<this>: androidx.navigation.NavGraphBuilder declared in nz.spahr.future_expense.navigation.FutureExpenseHomeKt.home' type=androidx.navigation.NavGraphBuilder origin=null
+      <T>: autopocket.future_expense.navigation.FutureExpenseHome
+      $receiver: GET_VAR '<this>: androidx.navigation.NavGraphBuilder declared in autopocket.future_expense.navigation.FutureExpenseHomeKt.home' type=androidx.navigation.NavGraphBuilder origin=null
       typeMap: COMPOSITE type=kotlin.collections.Map<kotlin.reflect.KType, @[JvmSuppressWildcards(suppress = <null>)] androidx.navigation.NavType<*>>? origin=DEFAULT_VALUE
         CONST Null type=kotlin.collections.Map<kotlin.reflect.KType, @[JvmSuppressWildcards(suppress = <null>)] androidx.navigation.NavType<*>>? value=null
       deepLinks: COMPOSITE type=kotlin.collections.List<androidx.navigation.NavDeepLink>? origin=DEFAULT_VALUE
@@ -83,7 +83,7 @@ FUN name:home visibility:public modality:FINAL <> ($receiver:androidx.navigation
           bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
             CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
               method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: P1 of kotlin.Function2, p2: P2 of kotlin.Function2): R of kotlin.Function2 [operator] declared in kotlin.Function2' type=kotlin.Any
-            RAW_FUNCTION_REFERENCE 'private final fun home$lambda$0 ($this$composable: androidx.compose.animation.AnimatedContentScope, it: androidx.navigation.NavBackStackEntry): kotlin.Unit? declared in nz.spahr.future_expense.navigation.FutureExpenseHomeKt' type=kotlin.Any
+            RAW_FUNCTION_REFERENCE 'private final fun home$lambda$0 ($this$composable: androidx.compose.animation.AnimatedContentScope, it: androidx.navigation.NavBackStackEntry): kotlin.Unit? declared in autopocket.future_expense.navigation.FutureExpenseHomeKt' type=kotlin.Any
             CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
               method: RAW_FUNCTION_REFERENCE 'public abstract fun invoke (p1: androidx.compose.animation.AnimatedContentScope, p2: androidx.navigation.NavBackStackEntry): kotlin.Unit? [fake_override,operator] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
       $mask0: CONST Int type=kotlin.Int value=127

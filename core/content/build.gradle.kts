@@ -1,9 +1,9 @@
 plugins {
-    id("spahr.convention.android.library")
+    id("autopocket.convention.android.library")
 }
 
 android {
-    namespace = "nz.spahr.content"
+    namespace = "kiwi.autopocket.content"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

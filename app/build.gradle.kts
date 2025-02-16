@@ -1,14 +1,14 @@
 plugins {
-    id("spahr.convention.android.application")
+    id("autopocket.convention.android.application")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "nz.spahr"
+    namespace = "kiwi.autopocket"
 
     defaultConfig {
-        applicationId = "nz.spahr"
+        applicationId = "kiwi.autopocket"
         versionCode = 1
         versionName = "1.0"
     }
@@ -31,8 +31,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:feature-contract"))
     //    Modules
+    implementation(project(":core:feature-contract"))
+    implementation(project(":core:presentation"))
     implementation(project(":core:theme"))
     implementation(project(":core:feature-flag"))
     implementation(project(":core:auth"))

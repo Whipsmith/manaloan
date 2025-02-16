@@ -27,16 +27,17 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Spahr"
+rootProject.name = "Autopocket"
 include(":app")
 include(":domain")
 
+include(":core:presentation")
 include(":core:feature-contract")
 include(":core:theme")
 include(":core:feature-flag")
 include(":core:auth")
-include(":core:content")
 
+include(":core:content")
 include(":feature:about")
 include(":feature:future-expense")
 include(":feature:fake-auth")

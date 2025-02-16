@@ -1,12 +1,12 @@
 plugins {
-    id("spahr.convention.android.library")
+    id("autopocket.convention.android.library")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
     alias(tools.plugins.ksp)
 }
 
 android {
-    namespace = "nz.spahr.fake_auth"
+    namespace = "kiwi.autopocket.fake_auth"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")
