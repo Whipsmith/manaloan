@@ -33,7 +33,7 @@ android {
 dependencies {
     //    Modules
     implementation(project(":core:presentation"))
-    implementation(project(":theme"))
+    implementation(project(":shared:theme"))
     implementation(project(":feature:future-expense"))
     implementation(project(":feature:about"))
     implementation(project(":feature:fake-auth"))

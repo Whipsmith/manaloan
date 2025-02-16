@@ -29,15 +29,16 @@ dependencyResolutionManagement {
 
 rootProject.name = "Autopocket"
 include(":app")
-include(":domain")
-
 include(":core:presentation")
+
 include(":core:feature-contract")
 include(":core:feature-flag")
 include(":core:auth")
 include(":core:content")
 
-include(":theme")
+include(":shared:theme")
+include(":shared:domain")
+
 include(":feature:about")
 include(":feature:future-expense")
 include(":feature:fake-auth")

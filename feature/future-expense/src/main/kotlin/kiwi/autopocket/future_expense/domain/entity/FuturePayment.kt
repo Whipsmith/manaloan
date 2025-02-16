@@ -1,4 +1,4 @@
-package kiwi.autopocket.domain.entity.future_payment
+package kiwi.autopocket.future_expense.domain.entity
 
 import java.math.BigDecimal
 import java.time.Instant

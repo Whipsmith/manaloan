@@ -1,6 +1,6 @@
 package kiwi.autopocket.future_expense.presentation.detail.model
 
-import kiwi.autopocket.domain.entity.future_payment.FuturePaymentDetail
+import kiwi.autopocket.future_expense.domain.entity.FuturePaymentDetail
 
 sealed interface FuturePaymentUiState {
     data object Loading : FuturePaymentUiState

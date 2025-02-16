@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import kiwi.autopocket.domain.usecase.future_payment.GetFuturePayment
+import kiwi.autopocket.future_expense.domain.usecase.GetFuturePayment
 import kiwi.autopocket.future_expense.presentation.detail.model.FuturePaymentUiState
 
 class FutureExpenseDetailViewModel(

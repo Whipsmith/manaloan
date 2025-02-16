@@ -28,10 +28,9 @@ android {
 dependencies {
 
     //    modules
-    implementation(project(":theme"))
+    implementation(project(":shared:theme"))
     implementation(project(":core:feature-contract"))
     implementation(project(":core:feature-flag"))
-    implementation(project(":domain"))
 
 //    libraries
     implementation(platform(libs.androidx.compose.bom))

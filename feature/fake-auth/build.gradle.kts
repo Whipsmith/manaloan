@@ -33,7 +33,7 @@ ksp {
 dependencies {
 
     //    modules
-    implementation(project(":theme"))
+    implementation(project(":shared:theme"))
     implementation(project(":core:feature-contract"))
     implementation(project(":core:auth"))
     implementation(project(":core:content"))
