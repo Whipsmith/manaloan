@@ -32,11 +32,8 @@ android {
 
 dependencies {
     //    Modules
-    implementation(project(":core:feature-contract"))
     implementation(project(":core:presentation"))
     implementation(project(":core:theme"))
-    implementation(project(":core:feature-flag"))
-    implementation(project(":core:auth"))
     implementation(project(":feature:future-expense"))
     implementation(project(":feature:about"))
     implementation(project(":feature:fake-auth"))

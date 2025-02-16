@@ -1,4 +1,4 @@
-package kiwi.autopocket.app
+package kiwi.autopocket.presentation.app
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LargeTopAppBar
@@ -9,13 +9,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import kiwi.autopocket.app.model.AppState
-import kiwi.autopocket.navigation.MainNavigationScaffoldDestination
-import kiwi.autopocket.navigation.mainNavigationScaffold
+import kiwi.autopocket.presentation.app.model.AppState
+import kiwi.autopocket.presentation.navigation.MainNavigationScaffoldDestination
+import kiwi.autopocket.presentation.navigation.mainNavigationScaffold
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-internal fun AutopocketApp(
+fun AutoPocketApp(
     navController: NavHostController,
     appState: AppState.Data,
 ) {

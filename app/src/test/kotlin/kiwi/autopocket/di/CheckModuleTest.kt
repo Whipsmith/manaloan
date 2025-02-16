@@ -1,7 +1,10 @@
 package kiwi.autopocket.di
 
-import kiwi.autopocket.app.provider.GetFeatureFlagMap
+import kiwi.autopocket.presentation.app.provider.GetFeatureFlagMap
 import kiwi.autopocket.auth.provider.AuthProvider
+import kiwi.autopocket.presentation.app.AppViewModel
+import kiwi.autopocket.presentation.app.provider.GetDetailNavigationGraphs
+import kiwi.autopocket.presentation.app.provider.GetMainNavItems
 import org.junit.Test
 import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.test.KoinTest
@@ -16,9 +19,9 @@ class CheckModuleTest : KoinTest {
         appModule.verify(
             injections = injectedParameters(
                 definition<GetFeatureFlagMap>(List::class),
-                definition<kiwi.autopocket.app.provider.GetMainNavItems>(List::class),
-                definition<kiwi.autopocket.app.provider.GetDetailNavigationGraphs>(List::class),
-                definition<kiwi.autopocket.app.AppViewModel>(AuthProvider::class)
+                definition<GetMainNavItems>(List::class),
+                definition<GetDetailNavigationGraphs>(List::class),
+                definition<AppViewModel>(AuthProvider::class)
             )
         )
         featureModules.verify()

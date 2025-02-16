@@ -1,4 +1,4 @@
-package kiwi.autopocket.app.model
+package kiwi.autopocket.presentation.app.model
 
 import androidx.compose.runtime.Stable
 import kotlinx.collections.immutable.ImmutableList

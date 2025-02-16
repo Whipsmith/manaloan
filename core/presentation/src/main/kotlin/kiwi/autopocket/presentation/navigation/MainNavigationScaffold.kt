@@ -1,4 +1,4 @@
-package kiwi.autopocket.navigation
+package kiwi.autopocket.presentation.navigation
 
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize

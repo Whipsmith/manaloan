@@ -1,4 +1,4 @@
-package kiwi.autopocket.app.provider
+package kiwi.autopocket.presentation.app.provider
 
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.flow.Flow

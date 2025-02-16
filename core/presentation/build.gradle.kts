@@ -1,5 +1,7 @@
 plugins {
     id("autopocket.convention.android.library")
+    alias(tools.plugins.kotlin.serialisation)
+    alias(tools.plugins.kotlin.compose)
 }
 
 android {
@@ -26,7 +28,6 @@ android {
 
 dependencies {
     implementation(project(":core:feature-contract"))
-    implementation(project(":core:theme"))
     implementation(project(":core:feature-flag"))
     implementation(project(":core:auth"))
 //    libraries

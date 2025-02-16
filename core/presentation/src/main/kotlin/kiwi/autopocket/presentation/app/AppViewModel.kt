@@ -1,7 +1,19 @@
-package kiwi.autopocket.app
+package kiwi.autopocket.presentation.app
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kiwi.autopocket.auth.entity.AuthState
+import kiwi.autopocket.auth.provider.AuthProvider
+import kiwi.autopocket.feature.navigation.FeatureNavGraph
+import kiwi.autopocket.feature.navigation.MainNavItem
+import kiwi.autopocket.feature_flag.FeatureFlag
+import kiwi.autopocket.feature_flag.isFeatureEnabled
+import kiwi.autopocket.presentation.app.model.AppState
+import kiwi.autopocket.presentation.app.model.AppStateDataBuilder
+import kiwi.autopocket.presentation.app.model.appStateData
+import kiwi.autopocket.presentation.app.provider.GetDetailNavigationGraphs
+import kiwi.autopocket.presentation.app.provider.GetFeatureFlagMap
+import kiwi.autopocket.presentation.app.provider.GetMainNavItems
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
@@ -10,22 +22,10 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapConcat
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import kiwi.autopocket.app.model.AppState
-import kiwi.autopocket.app.model.AppStateDataBuilder
-import kiwi.autopocket.app.model.appStateData
-import kiwi.autopocket.app.provider.GetDetailNavigationGraphs
-import kiwi.autopocket.app.provider.GetFeatureFlagMap
-import kiwi.autopocket.app.provider.GetMainNavItems
-import kiwi.autopocket.auth.entity.AuthState
-import kiwi.autopocket.auth.provider.AuthProvider
-import kiwi.autopocket.feature.navigation.FeatureNavGraph
-import kiwi.autopocket.feature.navigation.MainNavItem
-import kiwi.autopocket.feature_flag.FeatureFlag
-import kiwi.autopocket.feature_flag.isFeatureEnabled
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class AppViewModel(
-    private val getFeatureFlagMap: GetFeatureFlagMap,
+    getFeatureFlagMap: GetFeatureFlagMap,
     private val getMainNavItems: GetMainNavItems,
     private val getDetailNavigationGraphs: GetDetailNavigationGraphs,
     private val authProvider: AuthProvider,
