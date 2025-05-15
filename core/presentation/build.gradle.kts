@@ -1,11 +1,11 @@
 plugins {
-    id("autopocket.convention.android.library")
+    id("manaLoan.convention.android.library")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "kiwi.autopocket.presentation"
+    namespace = "kiwi.manaLoan.presentation"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

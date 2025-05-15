@@ -1,12 +1,12 @@
 plugins {
-    id("autopocket.convention.android.library")
+    id("manaLoan.convention.android.library")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
     alias(tools.plugins.ksp)
 }
 
 android {
-    namespace = "kiwi.autopocket.fake_auth"
+    namespace = "kiwi.manaLoan.fake_auth"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

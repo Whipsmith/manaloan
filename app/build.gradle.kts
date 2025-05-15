@@ -1,14 +1,14 @@
 plugins {
-    id("autopocket.convention.android.application")
+    id("manaLoan.convention.android.application")
     alias(tools.plugins.kotlin.serialisation)
     alias(tools.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "kiwi.autopocket"
+    namespace = "kiwi.manaLoan"
 
     defaultConfig {
-        applicationId = "kiwi.autopocket"
+        applicationId = "kiwi.manaLoan"
         versionCode = 1
         versionName = "1.0"
     }

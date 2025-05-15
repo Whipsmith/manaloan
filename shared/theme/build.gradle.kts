@@ -1,10 +1,10 @@
 plugins {
-    id("autopocket.convention.android.library")
+    id("manaLoan.convention.android.library")
     alias(tools.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "kiwi.autopocket.theme"
+    namespace = "kiwi.manaLoan.theme"
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")
     }

@@ -27,7 +27,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Autopocket"
+rootProject.name = "ManaLoan"
 include(":app")
 include(":core:presentation")
 

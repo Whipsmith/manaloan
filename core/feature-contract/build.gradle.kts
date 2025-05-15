@@ -1,9 +1,9 @@
 plugins {
-    id("autopocket.convention.android.library")
+    id("manaLoan.convention.android.library")
 }
 
 android {
-    namespace = "kiwi.autopocket.feature"
+    namespace = "kiwi.manaLoan.feature"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

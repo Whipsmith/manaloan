@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31"
-        android:name=".AutoPocketApplication">
+        android:name="kiwi.manaloan.ManaLoanApplication">
         <activity
             android:name=".MainActivity"
             android:exported="true"
