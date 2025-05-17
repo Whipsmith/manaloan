@@ -1,9 +1,9 @@
-package kiwi.manaLoan.fake_auth.presentation.sign_in
+package kiwi.manaloan.fake_auth.presentation.sign_in
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
-import kiwi.manaLoan.fake_auth.presentation.sign_in.view.SignInScreen
+import kiwi.manaloan.fake_auth.presentation.sign_in.view.SignInScreen
 import org.koin.androidx.compose.koinViewModel
 
 @Serializable

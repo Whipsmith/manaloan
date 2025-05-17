@@ -1,4 +1,4 @@
-package kiwi.manaLoan.fake_auth.presentation.first_launch.view
+package kiwi.manaloan.fake_auth.presentation.first_launch.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

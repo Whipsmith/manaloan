@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    namespace = "kiwi.manaLoan"
+    namespace = "kiwi.manaloan"
 
     defaultConfig {
-        applicationId = "kiwi.manaLoan"
+        applicationId = "kiwi.manaloan"
         versionCode = 1
         versionName = "1.0"
     }

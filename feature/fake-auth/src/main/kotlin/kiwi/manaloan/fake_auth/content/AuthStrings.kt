@@ -1,6 +1,6 @@
-package kiwi.manaLoan.fake_auth.content
+package kiwi.manaloan.fake_auth.content
 
-import kiwi.manaLoan.content.CommonStrings
+import kiwi.manaloan.content.CommonStrings
 
 internal data class AuthStrings(
     val common: CommonStrings,

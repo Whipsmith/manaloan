@@ -1,4 +1,4 @@
-package kiwi.manaLoan.fake_auth.presentation.sign_in.view
+package kiwi.manaloan.fake_auth.presentation.sign_in.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -31,7 +31,7 @@ import cafe.adriel.lyricist.LocalStrings
 import cafe.adriel.lyricist.Lyricist
 import cafe.adriel.lyricist.ProvideStrings
 import cafe.adriel.lyricist.rememberStrings
-import kiwi.manaLoan.fake_auth.content.AuthStrings
+import kiwi.manaloan.fake_auth.content.AuthStrings
 
 @Composable
 internal fun SignInScreen(

@@ -1,4 +1,4 @@
-package kiwi.manaLoan.presentation.app
+package kiwi.manaloan.presentation.app
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LargeTopAppBar
@@ -9,9 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import kiwi.manaLoan.presentation.app.model.AppState
-import kiwi.manaLoan.presentation.navigation.MainNavigationScaffoldDestination
-import kiwi.manaLoan.presentation.navigation.mainNavigationScaffold
+import kiwi.manaloan.presentation.app.model.AppState
+import kiwi.manaloan.presentation.navigation.MainNavigationScaffoldDestination
+import kiwi.manaloan.presentation.navigation.mainNavigationScaffold
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

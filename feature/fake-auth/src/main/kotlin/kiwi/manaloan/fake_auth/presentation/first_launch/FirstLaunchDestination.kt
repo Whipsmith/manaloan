@@ -1,9 +1,9 @@
-package kiwi.manaLoan.fake_auth.presentation.first_launch
+package kiwi.manaloan.fake_auth.presentation.first_launch
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
-import kiwi.manaLoan.fake_auth.presentation.first_launch.view.FirstLaunchScreen
+import kiwi.manaloan.fake_auth.presentation.first_launch.view.FirstLaunchScreen
 
 @Serializable
 object FirstLaunchDestination

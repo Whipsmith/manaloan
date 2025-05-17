@@ -1,9 +1,9 @@
-package kiwi.manaLoan.future_expense.presentation.home
+package kiwi.manaloan.future_expense.presentation.home
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
-import kiwi.manaLoan.future_expense.presentation.home.view.FutureExpenseListView
+import kiwi.manaloan.future_expense.presentation.home.view.FutureExpenseListView
 
 @Serializable
 object FutureExpenseHome

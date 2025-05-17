@@ -1,4 +1,4 @@
-package kiwi.manaLoan.about
+package kiwi.manaloan.about
 
 import org.junit.Test
 

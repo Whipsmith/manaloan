@@ -1,14 +1,14 @@
-package kiwi.manaLoan.presentation.di
+package kiwi.manaloan.presentation.di
 
-import kiwi.manaLoan.auth.provider.AuthProvider
-import kiwi.manaLoan.feature.navigation.FeatureNavGraph
-import kiwi.manaLoan.feature.navigation.MainNavItem
-import kiwi.manaLoan.feature_flag.FeatureFlag
-import kiwi.manaLoan.feature_flag.FeatureFlagValueProvider
-import kiwi.manaLoan.presentation.app.AppViewModel
-import kiwi.manaLoan.presentation.app.provider.GetDetailNavigationGraphs
-import kiwi.manaLoan.presentation.app.provider.GetFeatureFlagMap
-import kiwi.manaLoan.presentation.app.provider.GetMainNavItems
+import kiwi.manaloan.auth.provider.AuthProvider
+import kiwi.manaloan.feature.navigation.FeatureNavGraph
+import kiwi.manaloan.feature.navigation.MainNavItem
+import kiwi.manaloan.feature_flag.FeatureFlag
+import kiwi.manaloan.feature_flag.FeatureFlagValueProvider
+import kiwi.manaloan.presentation.app.AppViewModel
+import kiwi.manaloan.presentation.app.provider.GetDetailNavigationGraphs
+import kiwi.manaloan.presentation.app.provider.GetFeatureFlagMap
+import kiwi.manaloan.presentation.app.provider.GetMainNavItems
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 

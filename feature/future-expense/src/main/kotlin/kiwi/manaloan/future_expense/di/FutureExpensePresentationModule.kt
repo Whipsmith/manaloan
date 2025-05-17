@@ -1,10 +1,10 @@
-package kiwi.manaLoan.future_expense.di
+package kiwi.manaloan.future_expense.di
 
-import kiwi.manaLoan.feature.navigation.FeatureNavGraph
-import kiwi.manaLoan.feature.navigation.MainNavItem
-import kiwi.manaLoan.future_expense.navigation.FutureExpenseFeatureNavGraph
-import kiwi.manaLoan.future_expense.navigation.FutureExpenseMainNavItem
-import kiwi.manaLoan.future_expense.presentation.detail.FutureExpenseDetailViewModel
+import kiwi.manaloan.feature.navigation.FeatureNavGraph
+import kiwi.manaloan.feature.navigation.MainNavItem
+import kiwi.manaloan.future_expense.navigation.FutureExpenseFeatureNavGraph
+import kiwi.manaloan.future_expense.navigation.FutureExpenseMainNavItem
+import kiwi.manaloan.future_expense.presentation.detail.FutureExpenseDetailViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module

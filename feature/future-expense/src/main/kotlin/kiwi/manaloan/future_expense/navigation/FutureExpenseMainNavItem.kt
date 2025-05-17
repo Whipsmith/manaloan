@@ -1,17 +1,17 @@
-package kiwi.manaLoan.future_expense.navigation
+package kiwi.manaloan.future_expense.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
-import kiwi.manaLoan.feature.navigation.MainNavItem
-import kiwi.manaLoan.feature_flag.FeatureFlag
-import kiwi.manaLoan.feature_flag.Flagged
-import kiwi.manaLoan.future_expense.feature_flags.FutureExpenseFlags
-import kiwi.manaLoan.future_expense.presentation.detail.navigateToDetail
-import kiwi.manaLoan.future_expense.presentation.home.FutureExpenseHome
-import kiwi.manaLoan.future_expense.presentation.home.home
+import kiwi.manaloan.feature.navigation.MainNavItem
+import kiwi.manaloan.feature_flag.FeatureFlag
+import kiwi.manaloan.feature_flag.Flagged
+import kiwi.manaloan.future_expense.feature_flags.FutureExpenseFlags
+import kiwi.manaloan.future_expense.presentation.detail.navigateToDetail
+import kiwi.manaloan.future_expense.presentation.home.FutureExpenseHome
+import kiwi.manaloan.future_expense.presentation.home.home
 import kotlin.reflect.KClass
 
 object FutureExpenseMainNavItem : MainNavItem, Flagged {

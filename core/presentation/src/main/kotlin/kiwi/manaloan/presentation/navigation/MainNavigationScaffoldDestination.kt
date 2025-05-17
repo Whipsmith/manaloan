@@ -1,4 +1,4 @@
-package kiwi.manaLoan.presentation.navigation
+package kiwi.manaloan.presentation.navigation
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.SnackbarHostState
@@ -8,7 +8,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
-import kiwi.manaLoan.feature.navigation.MainNavItem
+import kiwi.manaloan.feature.navigation.MainNavItem
 import kotlin.reflect.KClass
 
 @Serializable

@@ -1,4 +1,4 @@
-package kiwi.manaLoan.future_expense.domain.entity
+package kiwi.manaloan.future_expense.domain.entity
 
 data class FuturePaymentDetail(
     val id: String

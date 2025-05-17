@@ -1,4 +1,4 @@
-package kiwi.manaLoan.feature.navigation
+package kiwi.manaloan.feature.navigation
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController

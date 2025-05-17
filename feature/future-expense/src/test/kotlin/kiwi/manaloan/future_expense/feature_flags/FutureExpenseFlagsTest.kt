@@ -1,9 +1,9 @@
-package kiwi.manaLoan.future_expense.feature_flags
+package kiwi.manaloan.future_expense.feature_flags
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
-import kiwi.manaLoan.feature_flag.FeatureFlag
-import kiwi.manaLoan.feature_flag.FeatureFlagValueProvider
+import kiwi.manaloan.feature_flag.FeatureFlag
+import kiwi.manaloan.feature_flag.FeatureFlagValueProvider
 import org.junit.Test
 
 class FutureExpenseFlagsTest {

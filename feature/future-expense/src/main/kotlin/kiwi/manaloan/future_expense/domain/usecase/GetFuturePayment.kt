@@ -1,10 +1,10 @@
-package kiwi.manaLoan.future_expense.domain.usecase
+package kiwi.manaloan.future_expense.domain.usecase
 
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kiwi.manaLoan.future_expense.domain.entity.FuturePaymentDetail
+import kiwi.manaloan.future_expense.domain.entity.FuturePaymentDetail
 import kotlin.time.Duration.Companion.seconds
 
 class GetFuturePayment {

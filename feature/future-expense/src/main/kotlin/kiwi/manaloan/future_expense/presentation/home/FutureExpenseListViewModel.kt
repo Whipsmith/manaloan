@@ -1,4 +1,4 @@
-package kiwi.manaLoan.future_expense.presentation.home
+package kiwi.manaloan.future_expense.presentation.home
 
 import androidx.lifecycle.ViewModel
 

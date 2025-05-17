@@ -1,8 +1,8 @@
 package kiwi.manaloan
 
 import android.app.Application
-import kiwi.manaLoan.di.appModule
-import kiwi.manaLoan.di.featureModules
+import kiwi.manaloan.di.appModule
+import kiwi.manaloan.di.featureModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin

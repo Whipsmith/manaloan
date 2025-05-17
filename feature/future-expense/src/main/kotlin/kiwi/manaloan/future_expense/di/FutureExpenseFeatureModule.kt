@@ -1,8 +1,8 @@
-package kiwi.manaLoan.future_expense.di
+package kiwi.manaloan.future_expense.di
 
-import kiwi.manaLoan.feature_flag.FeatureFlag
-import kiwi.manaLoan.feature_flag.FeatureFlagValueProvider
-import kiwi.manaLoan.future_expense.feature_flags.FutureExpenseFlags
+import kiwi.manaloan.feature_flag.FeatureFlag
+import kiwi.manaloan.feature_flag.FeatureFlagValueProvider
+import kiwi.manaloan.future_expense.feature_flags.FutureExpenseFlags
 import org.koin.dsl.bind
 import org.koin.dsl.module
 

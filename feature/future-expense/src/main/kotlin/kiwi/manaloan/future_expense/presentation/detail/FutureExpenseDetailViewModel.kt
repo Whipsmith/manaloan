@@ -1,4 +1,4 @@
-package kiwi.manaLoan.future_expense.presentation.detail
+package kiwi.manaloan.future_expense.presentation.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,8 +9,8 @@ import kotlinx.coroutines.flow.emitAll
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
-import kiwi.manaLoan.future_expense.domain.usecase.GetFuturePayment
-import kiwi.manaLoan.future_expense.presentation.detail.model.FuturePaymentUiState
+import kiwi.manaloan.future_expense.domain.usecase.GetFuturePayment
+import kiwi.manaloan.future_expense.presentation.detail.model.FuturePaymentUiState
 
 class FutureExpenseDetailViewModel(
     private val id: String,

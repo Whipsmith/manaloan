@@ -1,8 +1,8 @@
-package kiwi.manaLoan.fake_auth.content
+package kiwi.manaloan.fake_auth.content
 
 import cafe.adriel.lyricist.LyricistStrings
-import kiwi.manaLoan.content.EnCommonStrings
-import kiwi.manaLoan.content.Locales
+import kiwi.manaloan.content.EnCommonStrings
+import kiwi.manaloan.content.Locales
 
 @LyricistStrings(languageTag = Locales.EN, default = true)
 internal val enAuthStrings = AuthStrings(

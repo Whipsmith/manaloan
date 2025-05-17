@@ -1,4 +1,4 @@
-package kiwi.manaLoan.feature_flag
+package kiwi.manaloan.feature_flag
 
 fun Any.isFeatureEnabled(valueFunction: (FeatureFlag) -> Boolean): Boolean {
     return (this as? Flagged)?.featureFlag?.let {

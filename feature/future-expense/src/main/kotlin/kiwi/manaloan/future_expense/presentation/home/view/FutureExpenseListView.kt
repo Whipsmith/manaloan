@@ -1,4 +1,4 @@
-package kiwi.manaLoan.future_expense.presentation.home.view
+package kiwi.manaloan.future_expense.presentation.home.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import kiwi.manaLoan.theme.ManaLoanTheme
+import kiwi.manaloan.theme.ManaLoanTheme
 
 @Composable
 internal fun FutureExpenseListView(

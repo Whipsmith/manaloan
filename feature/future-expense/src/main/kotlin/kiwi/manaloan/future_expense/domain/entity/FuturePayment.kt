@@ -1,4 +1,4 @@
-package kiwi.manaLoan.future_expense.domain.entity
+package kiwi.manaloan.future_expense.domain.entity
 
 import java.math.BigDecimal
 import java.time.Instant

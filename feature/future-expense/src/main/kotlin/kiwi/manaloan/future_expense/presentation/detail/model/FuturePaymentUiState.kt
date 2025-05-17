@@ -1,6 +1,6 @@
-package kiwi.manaLoan.future_expense.presentation.detail.model
+package kiwi.manaloan.future_expense.presentation.detail.model
 
-import kiwi.manaLoan.future_expense.domain.entity.FuturePaymentDetail
+import kiwi.manaloan.future_expense.domain.entity.FuturePaymentDetail
 
 sealed interface FuturePaymentUiState {
     data object Loading : FuturePaymentUiState

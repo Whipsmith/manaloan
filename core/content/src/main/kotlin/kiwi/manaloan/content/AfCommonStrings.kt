@@ -1,4 +1,4 @@
-package kiwi.manaLoan.content
+package kiwi.manaloan.content
 
 class AfCommonStrings : CommonStrings {
     override val ok = "ok"

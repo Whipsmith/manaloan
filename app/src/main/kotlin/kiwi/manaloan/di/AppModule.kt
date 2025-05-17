@@ -1,6 +1,6 @@
-package kiwi.manaLoan.di
+package kiwi.manaloan.di
 
-import kiwi.manaLoan.presentation.di.presentationModule
+import kiwi.manaloan.presentation.di.presentationModule
 import org.koin.dsl.module
 
 val appModule = module {

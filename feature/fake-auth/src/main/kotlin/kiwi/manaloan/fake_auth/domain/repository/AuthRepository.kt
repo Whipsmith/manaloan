@@ -1,4 +1,4 @@
-package kiwi.manaLoan.fake_auth.domain.repository
+package kiwi.manaloan.fake_auth.domain.repository
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

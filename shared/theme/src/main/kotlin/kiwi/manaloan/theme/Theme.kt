@@ -1,4 +1,4 @@
-package kiwi.manaLoan.theme
+package kiwi.manaloan.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -7,33 +7,61 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+val DarkColorScheme = darkColorScheme(
+    primary = md_primary,
+    onPrimary = md_onPrimary,
+    primaryContainer = md_primaryContainer,
+    onPrimaryContainer = md_onPrimaryContainer,
+    secondary = md_secondary,
+    onSecondary = md_onSecondary,
+    secondaryContainer = md_secondaryContainer,
+    onSecondaryContainer = md_onSecondaryContainer,
+    background = md_background_dark,
+    onBackground = md_onBackground_dark,
+    surface = md_surface_dark,
+    onSurface = md_onSurface_dark,
+    surfaceVariant = md_surfaceVariant,
+    onSurfaceVariant = md_onSurfaceVariant,
+    outline = md_outline,
+    inverseOnSurface = md_inverseOnSurface,
+    inverseSurface = md_inverseSurface,
+    inversePrimary = md_inversePrimary,
+    error = md_error,
+    onError = md_onError,
+    errorContainer = md_errorContainer,
+    onErrorContainer = md_onErrorContainer
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+val LightColorScheme = lightColorScheme(
+    primary = md_primary,
+    onPrimary = md_onPrimary,
+    primaryContainer = md_primaryContainer,
+    onPrimaryContainer = md_onPrimaryContainer,
+    secondary = md_secondary,
+    onSecondary = md_onSecondary,
+    secondaryContainer = md_secondaryContainer,
+    onSecondaryContainer = md_onSecondaryContainer,
+    background = md_background_light,
+    onBackground = md_onBackground_light,
+    surface = md_surface_light,
+    onSurface = md_onSurface_light,
+    surfaceVariant = md_surfaceVariant,
+    onSurfaceVariant = md_onSurfaceVariant,
+    outline = md_outline,
+    inverseOnSurface = md_inverseOnSurface,
+    inverseSurface = md_inverseSurface,
+    inversePrimary = md_inversePrimary,
+    error = md_error,
+    onError = md_onError,
+    errorContainer = md_errorContainer,
+    onErrorContainer = md_onErrorContainer
 )
 
 @Composable
 fun ManaLoanTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -50,7 +78,7 @@ fun ManaLoanTheme(
 
     androidx.compose.material3.MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = ManaLoanTypography,
         content = content
     )
 }

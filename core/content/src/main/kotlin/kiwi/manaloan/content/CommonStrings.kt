@@ -1,4 +1,4 @@
-package kiwi.manaLoan.content
+package kiwi.manaloan.content
 
 interface CommonStrings {
     val ok: String

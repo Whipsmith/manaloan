@@ -1,4 +1,4 @@
-package kiwi.manaLoan.future_expense
+package kiwi.manaloan.future_expense
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("kiwi.manaLoan.future_expense.test", appContext.packageName)
+        assertEquals("kiwi.manaloan.future_expense.test", appContext.packageName)
     }
 }

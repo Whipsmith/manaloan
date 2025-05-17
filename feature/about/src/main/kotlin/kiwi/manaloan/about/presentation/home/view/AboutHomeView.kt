@@ -1,10 +1,10 @@
-package kiwi.manaLoan.about.presentation.home.view
+package kiwi.manaloan.about.presentation.home.view
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import kiwi.manaLoan.theme.ManaLoanTheme
+import kiwi.manaloan.theme.ManaLoanTheme
 
 @Composable
 internal fun AboutHomeView() {

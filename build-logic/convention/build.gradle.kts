@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl` // Enables writing Gradle scripts in Kotlin
 }
 
-group = "kiwi.manaLoan.buildlogic"
+group = "kiwi.manaloan.buildlogic"
 
 kotlin {
     jvmToolchain(17)

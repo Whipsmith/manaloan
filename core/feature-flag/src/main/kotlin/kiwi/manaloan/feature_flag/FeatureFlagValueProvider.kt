@@ -1,4 +1,4 @@
-package kiwi.manaLoan.feature_flag
+package kiwi.manaloan.feature_flag
 
 interface FeatureFlagValueProvider {
     val priority: FeatureFlagValueProviderPriority

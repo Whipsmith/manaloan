@@ -1,10 +1,10 @@
-package kiwi.manaLoan.di
+package kiwi.manaloan.di
 
-import kiwi.manaLoan.presentation.app.provider.GetFeatureFlagMap
-import kiwi.manaLoan.auth.provider.AuthProvider
-import kiwi.manaLoan.presentation.app.AppViewModel
-import kiwi.manaLoan.presentation.app.provider.GetDetailNavigationGraphs
-import kiwi.manaLoan.presentation.app.provider.GetMainNavItems
+import kiwi.manaloan.presentation.app.provider.GetFeatureFlagMap
+import kiwi.manaloan.auth.provider.AuthProvider
+import kiwi.manaloan.presentation.app.AppViewModel
+import kiwi.manaloan.presentation.app.provider.GetDetailNavigationGraphs
+import kiwi.manaloan.presentation.app.provider.GetMainNavItems
 import org.junit.Test
 import org.koin.core.annotation.KoinExperimentalAPI
 import org.koin.test.KoinTest

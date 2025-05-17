@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "kiwi.manaLoan.fake_auth"
+    namespace = "kiwi.manaloan.fake_auth"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

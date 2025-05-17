@@ -1,8 +1,8 @@
-package kiwi.manaLoan.future_expense.feature_flags
+package kiwi.manaloan.future_expense.feature_flags
 
-import kiwi.manaLoan.feature_flag.FeatureFlag
-import kiwi.manaLoan.feature_flag.FeatureFlagValueProvider
-import kiwi.manaLoan.feature_flag.FeatureFlagValueProviderPriority
+import kiwi.manaloan.feature_flag.FeatureFlag
+import kiwi.manaloan.feature_flag.FeatureFlagValueProvider
+import kiwi.manaloan.feature_flag.FeatureFlagValueProviderPriority
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 

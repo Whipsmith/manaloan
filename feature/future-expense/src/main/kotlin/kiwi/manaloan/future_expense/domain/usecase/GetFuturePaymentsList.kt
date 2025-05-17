@@ -1,6 +1,6 @@
-package kiwi.manaLoan.future_expense.domain.usecase
+package kiwi.manaloan.future_expense.domain.usecase
 
-import kiwi.manaLoan.future_expense.domain.entity.FuturePayment
+import kiwi.manaloan.future_expense.domain.entity.FuturePayment
 import kotlinx.coroutines.flow.Flow
 
 class GetFuturePaymentsList {

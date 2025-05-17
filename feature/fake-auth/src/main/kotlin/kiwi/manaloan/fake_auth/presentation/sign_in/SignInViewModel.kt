@@ -1,9 +1,9 @@
-package kiwi.manaLoan.fake_auth.presentation.sign_in
+package kiwi.manaloan.fake_auth.presentation.sign_in
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import kiwi.manaLoan.fake_auth.domain.usecase.SignIn
+import kiwi.manaloan.fake_auth.domain.usecase.SignIn
 
 class SignInViewModel(
     private val signIn: SignIn,

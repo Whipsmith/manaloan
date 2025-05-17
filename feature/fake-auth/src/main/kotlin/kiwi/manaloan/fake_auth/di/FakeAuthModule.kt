@@ -1,13 +1,13 @@
-package kiwi.manaLoan.fake_auth.di
+package kiwi.manaloan.fake_auth.di
 
-import kiwi.manaLoan.auth.provider.AuthProvider
-import kiwi.manaLoan.fake_auth.domain.repository.AuthRepository
-import kiwi.manaLoan.fake_auth.domain.usecase.MonitorSignedInState
-import kiwi.manaLoan.fake_auth.domain.usecase.SignIn
-import kiwi.manaLoan.fake_auth.framework.FakeAuthProvider
-import kiwi.manaLoan.fake_auth.navigation.FakeAuthNavigationGraph
-import kiwi.manaLoan.fake_auth.presentation.sign_in.SignInViewModel
-import kiwi.manaLoan.feature.navigation.FeatureNavGraph
+import kiwi.manaloan.auth.provider.AuthProvider
+import kiwi.manaloan.fake_auth.domain.repository.AuthRepository
+import kiwi.manaloan.fake_auth.domain.usecase.MonitorSignedInState
+import kiwi.manaloan.fake_auth.domain.usecase.SignIn
+import kiwi.manaloan.fake_auth.framework.FakeAuthProvider
+import kiwi.manaloan.fake_auth.navigation.FakeAuthNavigationGraph
+import kiwi.manaloan.fake_auth.presentation.sign_in.SignInViewModel
+import kiwi.manaloan.feature.navigation.FeatureNavGraph
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.bind
 import org.koin.dsl.module

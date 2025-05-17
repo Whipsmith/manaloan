@@ -1,6 +1,6 @@
-package kiwi.manaLoan.fake_auth.domain.usecase
+package kiwi.manaloan.fake_auth.domain.usecase
 
-import kiwi.manaLoan.fake_auth.domain.repository.AuthRepository
+import kiwi.manaloan.fake_auth.domain.repository.AuthRepository
 
 class MonitorSignedInState(
     private val authRepository: AuthRepository

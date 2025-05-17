@@ -1,4 +1,4 @@
-package kiwi.manaLoan.theme
+package kiwi.manaloan.theme
 
 import org.junit.Test
 

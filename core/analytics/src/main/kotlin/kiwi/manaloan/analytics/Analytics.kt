@@ -1,4 +1,4 @@
-package kiwi.manaLoan.analytics
+package kiwi.manaloan.analytics
 
 object Analytics {
     private lateinit var analyticsTracker: AnalyticsTracker

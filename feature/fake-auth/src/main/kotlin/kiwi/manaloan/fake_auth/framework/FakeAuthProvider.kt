@@ -1,10 +1,10 @@
-package kiwi.manaLoan.fake_auth.framework
+package kiwi.manaloan.fake_auth.framework
 
 import kotlinx.coroutines.flow.map
-import kiwi.manaLoan.auth.entity.AuthState
-import kiwi.manaLoan.auth.provider.AuthProvider
-import kiwi.manaLoan.fake_auth.domain.usecase.MonitorSignedInState
-import kiwi.manaLoan.fake_auth.presentation.sign_in.SignInDestination
+import kiwi.manaloan.auth.entity.AuthState
+import kiwi.manaloan.auth.provider.AuthProvider
+import kiwi.manaloan.fake_auth.domain.usecase.MonitorSignedInState
+import kiwi.manaloan.fake_auth.presentation.sign_in.SignInDestination
 
 
 class FakeAuthProvider(

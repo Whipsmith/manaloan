@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "kiwi.manaLoan.future_expense"
+    namespace = "kiwi.manaloan.future_expense"
 
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")

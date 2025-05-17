@@ -1,11 +1,11 @@
-package kiwi.manaLoan.future_expense.presentation.detail.view
+package kiwi.manaloan.future_expense.presentation.detail.view
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import kiwi.manaLoan.future_expense.presentation.detail.model.FuturePaymentUiState
-import kiwi.manaLoan.theme.ManaLoanTheme
+import kiwi.manaloan.future_expense.presentation.detail.model.FuturePaymentUiState
+import kiwi.manaloan.theme.ManaLoanTheme
 
 @Composable
 internal fun FutureExpenseDetailView(state: FuturePaymentUiState) {

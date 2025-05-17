@@ -1,9 +1,9 @@
-package kiwi.manaLoan.about.di
+package kiwi.manaloan.about.di
 
-import kiwi.manaLoan.about.navigation.AboutFeatureNavGraph
-import kiwi.manaLoan.about.navigation.AboutMainNavItem
-import kiwi.manaLoan.feature.navigation.FeatureNavGraph
-import kiwi.manaLoan.feature.navigation.MainNavItem
+import kiwi.manaloan.about.navigation.AboutFeatureNavGraph
+import kiwi.manaloan.about.navigation.AboutMainNavItem
+import kiwi.manaloan.feature.navigation.FeatureNavGraph
+import kiwi.manaloan.feature.navigation.MainNavItem
 import org.koin.dsl.bind
 import org.koin.dsl.module
 

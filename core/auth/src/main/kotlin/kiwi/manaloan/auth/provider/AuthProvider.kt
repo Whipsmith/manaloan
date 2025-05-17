@@ -1,6 +1,6 @@
-package kiwi.manaLoan.auth.provider
+package kiwi.manaloan.auth.provider
 
-import kiwi.manaLoan.auth.entity.AuthState
+import kiwi.manaloan.auth.entity.AuthState
 import kotlinx.coroutines.flow.Flow
 import kotlin.reflect.KClass
 

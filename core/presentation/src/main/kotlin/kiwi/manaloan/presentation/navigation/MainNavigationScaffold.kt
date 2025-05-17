@@ -1,4 +1,4 @@
-package kiwi.manaLoan.presentation.navigation
+package kiwi.manaloan.presentation.navigation
 
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,7 +23,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import kiwi.manaLoan.feature.navigation.MainNavItem
+import kiwi.manaloan.feature.navigation.MainNavItem
 import kotlin.reflect.KClass
 
 @OptIn(ExperimentalMaterial3Api::class)

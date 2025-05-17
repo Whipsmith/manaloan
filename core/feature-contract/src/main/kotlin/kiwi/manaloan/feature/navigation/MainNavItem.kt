@@ -1,4 +1,4 @@
-package kiwi.manaLoan.feature.navigation
+package kiwi.manaloan.feature.navigation
 
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavGraphBuilder

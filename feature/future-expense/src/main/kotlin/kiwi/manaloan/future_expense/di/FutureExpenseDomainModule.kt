@@ -1,6 +1,6 @@
-package kiwi.manaLoan.future_expense.di
+package kiwi.manaloan.future_expense.di
 
-import kiwi.manaLoan.future_expense.domain.usecase.GetFuturePayment
+import kiwi.manaloan.future_expense.domain.usecase.GetFuturePayment
 import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.module
 

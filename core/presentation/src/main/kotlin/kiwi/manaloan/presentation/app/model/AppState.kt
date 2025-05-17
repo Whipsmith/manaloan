@@ -1,13 +1,13 @@
-package kiwi.manaLoan.presentation.app.model
+package kiwi.manaloan.presentation.app.model
 
 import androidx.compose.runtime.Stable
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.ImmutableMap
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableMap
-import kiwi.manaLoan.feature.navigation.FeatureNavGraph
-import kiwi.manaLoan.feature.navigation.MainNavItem
-import kiwi.manaLoan.feature_flag.FeatureFlag
+import kiwi.manaloan.feature.navigation.FeatureNavGraph
+import kiwi.manaloan.feature.navigation.MainNavItem
+import kiwi.manaloan.feature_flag.FeatureFlag
 import kotlin.reflect.KClass
 
 

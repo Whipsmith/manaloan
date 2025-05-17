@@ -1,4 +1,4 @@
-package kiwi.manaLoan.fake_auth
+package kiwi.manaloan.fake_auth
 
 import org.junit.Test
 

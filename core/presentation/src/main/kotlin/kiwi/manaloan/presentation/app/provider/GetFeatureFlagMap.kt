@@ -1,10 +1,10 @@
-package kiwi.manaLoan.presentation.app.provider
+package kiwi.manaloan.presentation.app.provider
 
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kiwi.manaLoan.feature_flag.FeatureFlag
-import kiwi.manaLoan.feature_flag.FeatureFlagValueProvider
+import kiwi.manaloan.feature_flag.FeatureFlag
+import kiwi.manaloan.feature_flag.FeatureFlagValueProvider
 
 class GetFeatureFlagMap(
     private val featureFlags: List<FeatureFlag>,

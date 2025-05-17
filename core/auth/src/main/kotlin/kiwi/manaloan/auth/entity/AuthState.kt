@@ -1,4 +1,4 @@
-package kiwi.manaLoan.auth.entity
+package kiwi.manaloan.auth.entity
 
 interface AuthState {
     val isAuthorized: Boolean

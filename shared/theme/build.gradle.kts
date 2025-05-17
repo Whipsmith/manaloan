@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "kiwi.manaLoan.theme"
+    namespace = "kiwi.manaloan.theme"
     defaultConfig {
         consumerProguardFiles("consumer-rules.pro")
     }

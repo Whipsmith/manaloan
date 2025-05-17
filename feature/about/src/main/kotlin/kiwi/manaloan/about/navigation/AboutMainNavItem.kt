@@ -1,13 +1,13 @@
-package kiwi.manaLoan.about.navigation
+package kiwi.manaloan.about.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
-import kiwi.manaLoan.about.presentation.home.AboutHome
-import kiwi.manaLoan.about.presentation.home.home
-import kiwi.manaLoan.feature.navigation.MainNavItem
+import kiwi.manaloan.about.presentation.home.AboutHome
+import kiwi.manaloan.about.presentation.home.home
+import kiwi.manaloan.feature.navigation.MainNavItem
 import kotlin.reflect.KClass
 
 

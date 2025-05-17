@@ -1,4 +1,4 @@
-package kiwi.manaLoan.future_expense
+package kiwi.manaloan.future_expense
 
 import org.junit.Test
 

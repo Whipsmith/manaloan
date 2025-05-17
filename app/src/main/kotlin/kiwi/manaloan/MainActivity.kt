@@ -1,4 +1,4 @@
-package kiwi.manaLoan
+package kiwi.manaloan
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,10 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.rememberNavController
-import kiwi.manaLoan.presentation.app.AppViewModel
-import kiwi.manaLoan.presentation.app.ManaLoanApp
-import kiwi.manaLoan.presentation.app.model.AppState
-import kiwi.manaLoan.theme.ManaLoanTheme
+import kiwi.manaloan.presentation.app.AppViewModel
+import kiwi.manaloan.presentation.app.ManaLoanApp
+import kiwi.manaloan.presentation.app.model.AppState
+import kiwi.manaloan.theme.ManaLoanTheme
 import org.koin.androidx.compose.KoinAndroidContext
 import org.koin.androidx.compose.koinViewModel
 
